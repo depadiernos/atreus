@@ -79,7 +79,7 @@
                    (outputdirectory ""))
                   )
 
-  (gr_text Atreus (at 131.5 84) (layer F.SilkS)
+  (gr_text AtreuSMD (at 133.5 86) (layer F.SilkS)
     (effects (font (size 4 3) (thickness 0.3048))))
   (gr_text "Phil Hagelberg" (at 145.25 107.5) (layer F.SilkS)
     (effects (font (size 2.032 1.524) (thickness 0.3048))))

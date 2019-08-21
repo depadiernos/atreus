@@ -869,7 +869,53 @@
 (module Capacitors_SMD:C_0805 (layer F.Cu)
   (tedit 58AA8463)
   (tstamp 5C346F4D)
-  (at 130 60 0)
+  (at 120 75 270)
+  (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
+  (tags "capacitor 0805")
+  (path /5C341D22)
+  (attr smd)
+  (fp_text
+   reference
+   "C3"
+   (at -3 0 0)
+   (layer F.SilkS)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text
+   value
+   "1uf"
+   (at 0 -1.75 90)
+   (layer F.Fab)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_line (start -1 -0.62) (end -1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 -0.62) (end -1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 0.62) (end 1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start -1 0.62) (end 1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 0.5 0.85) (end -0.5 0.85) (layer F.SilkS) (width 0.12))
+  (fp_line (start -0.5 -0.85) (end 0.5 -0.85) (layer F.SilkS) (width 0.12))
+  (fp_line (start -1.75 0.88) (end 1.75 0.88) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1.75 0.88) (end -1.75 -0.87) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.75 -0.87) (end 1.75 0.88) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.75 -0.87) (end -1.75 -0.87) (layer F.CrtYd) (width 0.05))
+  (pad
+   1
+   smd
+   rect
+   (at -1 0 90)
+   (size 1 1.25)
+   (layers F.Cu F.Paste F.Mask)
+   (net 105 GND))
+  (pad
+   2
+   smd
+   rect
+   (at 1 0 90)
+   (size 1 1.25)
+   (layers F.Cu F.Paste F.Mask)
+   (net 106 Net-C3-Pad1)))
+(module Capacitors_SMD:C_0805 (layer F.Cu)
+  (tedit 58AA8463)
+  (tstamp 5C346F4D)
+  (at 123 85 90)
   (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
   (tags "capacitor 0805")
   (path /5C341D22)
@@ -882,7 +928,7 @@
    (effects (font (size 1 1) (thickness 0.15))))
   (fp_text
    value
-   "0.1pf"
+   "0.1uf"
    (at 0 -1.75 90)
    (layer F.Fab)
    (effects (font (size 1 1) (thickness 0.15))))
@@ -915,7 +961,7 @@
 (module Capacitors_SMD:C_0805 (layer F.Cu)
   (tedit 58AA8463)
   (tstamp 5C346F4D)
-  (at 135 60 0)
+  (at 145 75 90)
   (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
   (tags "capacitor 0805")
   (path /5C341D22)
@@ -928,7 +974,7 @@
    (effects (font (size 1 1) (thickness 0.15))))
   (fp_text
    value
-   "0.1pf"
+   "0.1uf"
    (at 0 -1.75 90)
    (layer F.Fab)
    (effects (font (size 1 1) (thickness 0.15))))
@@ -961,7 +1007,7 @@
 (module Capacitors_SMD:C_0805 (layer F.Cu)
   (tedit 58AA8463)
   (tstamp 5C346F4D)
-  (at 140 60 0)
+  (at 135 65 0)
   (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
   (tags "capacitor 0805")
   (path /5C341D22)
@@ -974,7 +1020,7 @@
    (effects (font (size 1 1) (thickness 0.15))))
   (fp_text
    value
-   "0.1pf"
+   "0.1uf"
    (at 0 -1.75 90)
    (layer F.Fab)
    (effects (font (size 1 1) (thickness 0.15))))
@@ -1007,7 +1053,7 @@
 (module Capacitors_SMD:C_0805 (layer F.Cu)
   (tedit 58AA8463)
   (tstamp 5C346F4D)
-  (at 145 60 0)
+  (at 123 70 90)
   (descr "Capacitor SMD 0805, reflow soldering, AVX (see smccp.pdf)")
   (tags "capacitor 0805")
   (path /5C341D22)
@@ -1020,7 +1066,7 @@
    (effects (font (size 1 1) (thickness 0.15))))
   (fp_text
    value
-   "0.1pf"
+   "10uf"
    (at 0 -1.75 90)
    (layer F.Fab)
    (effects (font (size 1 1) (thickness 0.15))))
@@ -1050,6 +1096,98 @@
    (size 1 1.25)
    (layers F.Cu F.Paste F.Mask)
    (net 102 +5V)))
+(module Resistors_SMD:R_0805 (layer F.Cu)
+  (tedit 58E0A804)
+  (tstamp 5C3454AB)
+  (at 123 80 270)
+  (descr "Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)")
+  (tags "resistor 0805")
+  (path /5C33F6F4)
+  (attr smd)
+  (fp_text
+   reference
+   "R1"
+   (at -3 0 0)
+   (layer F.SilkS)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text
+   value
+   "10k"
+   (at 0 -1.75 90)
+   (layer F.Fab)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_line (start -1 -0.62) (end -1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 -0.62) (end -1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 0.62) (end 1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start -1 0.62) (end 1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 0.6 -0.88) (end -0.6 -0.88) (layer F.SilkS) (width 0.12))
+  (fp_line (start -0.6 0.88) (end 0.6 0.88) (layer F.SilkS) (width 0.12))
+  (fp_line (start -1.55 0.9) (end 1.55 0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1.55 0.9) (end -1.55 -0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.55 -0.9) (end 1.55 0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.55 -0.9) (end -1.55 -0.9) (layer F.CrtYd) (width 0.05))
+  (pad
+   1
+   smd
+   rect
+   (at -0.95 0 360)
+   (size 0.7 1.3)
+   (layers F.Cu F.Paste F.Mask)
+   (net 102 +5V))
+  (pad
+   2
+   smd
+   rect
+   (at 0.95 0 360)
+   (size 0.7 1.3)
+   (layers F.Cu F.Paste F.Mask)
+   (net 113 Net-R1-Pad2)))
+(module Resistors_SMD:R_0805 (layer F.Cu)
+  (tedit 58E0A804)
+  (tstamp 5C3454AB)
+  (at 145 70 270)
+  (descr "Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)")
+  (tags "resistor 0805")
+  (path /5C33F6F4)
+  (attr smd)
+  (fp_text
+   reference
+   "R4"
+   (at -3 0 0)
+   (layer F.SilkS)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text
+   value
+   "10k"
+   (at 0 -1.75 90)
+   (layer F.Fab)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_line (start -1 -0.62) (end -1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 -0.62) (end -1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 1 0.62) (end 1 -0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start -1 0.62) (end 1 0.62) (layer F.Fab) (width 0.1))
+  (fp_line (start 0.6 -0.88) (end -0.6 -0.88) (layer F.SilkS) (width 0.12))
+  (fp_line (start -0.6 0.88) (end 0.6 0.88) (layer F.SilkS) (width 0.12))
+  (fp_line (start -1.55 0.9) (end 1.55 0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1.55 0.9) (end -1.55 -0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.55 -0.9) (end 1.55 0.9) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 1.55 -0.9) (end -1.55 -0.9) (layer F.CrtYd) (width 0.05))
+  (pad
+   1
+   smd
+   rect
+   (at -0.95 0 360)
+   (size 0.7 1.3)
+   (layers F.Cu F.Paste F.Mask)
+   (net 105 GND))
+  (pad
+   2
+   smd
+   rect
+   (at 0.95 0 360)
+   (size 0.7 1.3)
+   (layers F.Cu F.Paste F.Mask)
+   (net 133 Net-R4-Pad2)))
 (module Molex-0548190589 (layer F.Cu)
   (tedit 5C494815)
   (at 134 32 270)
@@ -4377,7 +4515,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 90.50418478725455 57.81745532799191 -10)
+  (at 90.50418478725454 57.81745532799191 -10)
   (path /543DB910)
   (fp_text
    reference
@@ -4518,7 +4656,7 @@
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 99.50418478725455 57.81745532799191 80)
+  (at 99.50418478725454 57.81745532799191 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -10963,7 +11101,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 237.52398385946222 68.59437213050146 10)
+  (at 237.52398385946222 68.59437213050145 10)
   (path /543DB910)
   (fp_text
    reference
@@ -11104,7 +11242,7 @@
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 228.52398385946222 68.59437213050146 100)
+  (at 228.52398385946222 68.59437213050145 100)
   (path /543DB90F)
   (attr smd)
   (fp_text

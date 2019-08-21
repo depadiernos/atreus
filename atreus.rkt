@@ -428,13 +428,15 @@
         (resistor-module 140 45 90  "R2" 22 `(net 104 Net-R2-Pad1) `(net 68 D+))
         (resistor-module 143 45 90  "R3" 22 `(net 103 Net-R3-Pad1) `(net 67 D-))))
 
-(define atmega+4100pcapacitor
+(define atmega+capacitor+resistor
   (list atmega-module
-        (capacitor-module 130 60 0 "C4" "0.1pf" `(net 102 +5V) `(net 105 GND))
-        (capacitor-module 135 60 0 "C5" "0.1pf" `(net 102 +5V) `(net 105 GND))
-        (capacitor-module 140 60 0 "C6" "0.1pf" `(net 102 +5V) `(net 105 GND))
-        (capacitor-module 145 60 0 "C7" "0.1pf" `(net 102 +5V) `(net 105 GND))
-        ))
+        (capacitor-module 120 75 270 "C3" "1uf"   `(net 106 Net-C3-Pad1) `(net 105 GND))
+        (capacitor-module 123 85 90  "C4" "0.1uf" `(net 102 +5V) `(net 105 GND))
+        (capacitor-module 145 75 90  "C5" "0.1uf" `(net 102 +5V) `(net 105 GND))
+        (capacitor-module 135 65 0   "C6" "0.1uf" `(net 102 +5V) `(net 105 GND))
+        (capacitor-module 123 70 90  "C7" "10uf"  `(net 102 +5V) `(net 105 GND))
+        (resistor-module  123 80 270 "R1" "10k"   `(net 102 +5V) `(net 113 Net-R1-Pad2))
+        (resistor-module  145 70 270 "R4" "10k"   `(net 105 GND) `(net 133 Net-R4-Pad2))))
 
 (define edge-cuts
   (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22] [250 95]  [161 112] [107 112] [18 95]))
@@ -445,7 +447,7 @@
   (apply append nets
          (list (net-class nets))
          crystal+capacitor
-         atmega+4100pcapacitor
+         atmega+capacitor+resistor
          usb+resistor
          edge-cuts
          switches+diodes))

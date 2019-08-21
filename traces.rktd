@@ -1,1 +1,1 @@
-  (segment (start 45.644934 35.018527) (end 47.075407 36.449) (width 0.254) (layer Back) (net 1) (status 10))
+  (segment (start 166.1212 42.9408) (end 166.1212 44.0393) (width 0.2032) (layer Front) (net 1))

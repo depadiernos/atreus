@@ -11,6 +11,29 @@
 
 (define column-offsets '(8 5 0 6 11 65 65 11 6 0 5 8))
 
+(define (fuse-module x y rotation label refer net-pos net-neg)
+  `(module Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow (layer F.Cu) (tedit 0) (tstamp 5C345425)
+    (at ,x ,y ,rotation)
+    (descr "Fuse, Sicherung, SMD1206, Littlefuse-Wickmann, Reflow,")
+    (tags "Fuse Sicherung SMD1206 Littlefuse-Wickmann Reflow ")
+    (path /5C348279)
+    (attr smd)
+    (attr smd)
+    (fp_text reference 500mA (at -0.1 -2.75 270) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
+    (fp_text value F1 (at -0.45 3.2 270) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
+    (fp_line (start 2.47 1.05) (end -2.47 1.05) (layer F.CrtYd) (width 0.05))
+    (fp_line (start 2.47 1.05) (end 2.47 -1.05) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -2.47 -1.05) (end -2.47 1.05) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -2.47 -1.05) (end 2.47 -1.05) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -1 -1.07) (end 1 -1.07) (layer F.SilkS) (width 0.12))
+    (fp_line (start 1 1.07) (end -1 1.07) (layer F.SilkS) (width 0.12))
+    (fp_line (start -1.6 -0.8) (end 1.6 -0.8) (layer F.Fab) (width 0.1))
+    (fp_line (start 1.6 -0.8) (end 1.6 0.8) (layer F.Fab) (width 0.1))
+    (fp_line (start 1.6 0.8) (end -1.6 0.8) (layer F.Fab) (width 0.1))
+    (fp_line (start -1.6 0.8) (end -1.6 -0.8) (layer F.Fab) (width 0.1))
+    (pad 1 smd rect (at -1.2 0) (size 2.03 1.14) (layers F.Cu F.Paste F.Mask) ,net-pos)
+    (pad 2 smd rect (at 1.2 0) (size 2.03 1.14) (layers F.Cu F.Paste F.Mask) ,net-neg)))
+
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
   `(module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front) (tedit 4FD81CDD) (tstamp 543EF801)
@@ -253,40 +276,6 @@
      (pad 6 thru_hole oval (at 0 3.65 ,rotation) (size 2.7 1.7) (drill oval 1.9 0.7) (layers *.Cu *.Mask))
      (pad 6 thru_hole oval (at 0 -3.65 ,rotation) (size 2.7 1.7) (drill oval 1.9 0.7) (layers *.Cu *.Mask))))
 
-(define microcontroller-module
-  `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
-     (at 134 70 270)
-     (path /543EEB02)
-     (fp_text value 32U4 (at -3 0 270) (layer F.SilkS)
-              (effects (font (size 3.048 2.54) (thickness 0.4572))))
-     (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
-     (fp_line (start 15.9 7.62) (end 15.9 -7.62) (layer F.SilkS) (width 0.381))
-     (fp_line (start 15.9 -7.62) (end -15.24 -7.62) (layer F.SilkS) (width 0.381))
-     (pad B6 thru_hole circle (at 13.97 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 4 N-row-3))
-     (pad B2 thru_hole circle (at 11.43 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 3 N-row-2))
-     (pad B3 thru_hole circle (at 8.89 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 14 N-col-9))
-     (pad B1 thru_hole circle (at 6.35 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 15 N-col-10))
-     (pad F7 thru_hole circle (at 3.81 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 11 N-col-6))
-     (pad F6 thru_hole circle (at 1.27 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 12 N-col-7))
-     (pad F5 thru_hole circle (at -1.27 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 13 N-col-8))
-     (pad F4 thru_hole circle (at -3.81 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad VCC thru_hole circle (at -6.35 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad RST thru_hole circle (at -8.89 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad GND thru_hole circle (at -11.43 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad RAW thru_hole circle (at -13.97 -6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad B5 thru_hole circle (at 13.97 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 2 N-row-1))
-     (pad B4 thru_hole circle (at 11.43 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 1 N-row-0))
-     (pad E6 thru_hole circle (at 8.89 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 10 N-col-5))
-     (pad D7 thru_hole circle (at 6.35 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 6 N-col-1))
-     (pad C6 thru_hole circle (at 3.81 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 5 N-col-0))
-     (pad D4 thru_hole circle (at 1.27 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 9 N-col-4))
-     (pad D0 thru_hole circle (at -1.27 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 8 N-col-3))
-     (pad D1 thru_hole circle (at -3.81 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 7 N-col-2))
-     (pad GND thru_hole circle (at -6.35 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad GND thru_hole circle (at -8.89 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad RX1 thru_hole circle (at -11.43 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad TX0 thru_hole rect (at -13.97 6.35 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))))
-
 (define nets
   `((net 0 "")
     (net 1 N-row-0)
@@ -423,10 +412,11 @@
         (capacitor-module 125 45 90  "C2" "22pf" `(net 116 Net-C2-Pad1) `(net 105 GND))
         (crystal-module   130 45 180 "CR" `(net 117 Net-C1-Pad1) `(net 116 Net-C2-Pad1) `(net 105 GND))))
 
-(define usb+resistor
+(define usb+resistor+fuse
   (list (usb-mini-module 134 32 270 "REF**" `(net 105 GND) `(net 94 Net-USB1-Pad2) `(net 68 D+) `(net 67 D-) `(net 63 VCC))
-        (resistor-module 140 45 90  "R2" 22 `(net 104 Net-R2-Pad1) `(net 68 D+))
-        (resistor-module 143 45 90  "R3" 22 `(net 103 Net-R3-Pad1) `(net 67 D-))))
+        (resistor-module 138 45 90  "R2" 22 `(net 104 Net-R2-Pad1) `(net 68 D+))
+        (resistor-module 140 45 90  "R3" 22 `(net 103 Net-R3-Pad1) `(net 67 D-))
+        (fuse-module     143 45 270 "F1" "500mA" `(net 63 VCC) `(net 102 +5V))))
 
 (define atmega+capacitor+resistor
   (list atmega-module
@@ -448,7 +438,7 @@
          (list (net-class nets))
          crystal+capacitor
          atmega+capacitor+resistor
-         usb+resistor
+         usb+resistor+fuse
          edge-cuts
          switches+diodes))
 

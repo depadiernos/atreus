@@ -1301,7 +1301,7 @@
 (module Resistors_SMD:R_0805 (layer F.Cu)
   (tedit 58E0A804)
   (tstamp 5C3454AB)
-  (at 140 45 90)
+  (at 138 45 90)
   (descr "Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)")
   (tags "resistor 0805")
   (path /5C33F6F4)
@@ -1347,7 +1347,7 @@
 (module Resistors_SMD:R_0805 (layer F.Cu)
   (tedit 58E0A804)
   (tstamp 5C3454AB)
-  (at 143 45 90)
+  (at 140 45 90)
   (descr "Resistor SMD 0805, reflow soldering, Vishay (see dcrcw.pdf)")
   (tags "resistor 0805")
   (path /5C33F6F4)
@@ -1390,6 +1390,53 @@
    (size 0.7 1.3)
    (layers F.Cu F.Paste F.Mask)
    (net 67 D-)))
+(module Fuse_Holders_and_Fuses:Fuse_SMD1206_Reflow (layer F.Cu)
+  (tedit 0)
+  (tstamp 5C345425)
+  (at 143 45 270)
+  (descr "Fuse, Sicherung, SMD1206, Littlefuse-Wickmann, Reflow,")
+  (tags "Fuse Sicherung SMD1206 Littlefuse-Wickmann Reflow ")
+  (path /5C348279)
+  (attr smd)
+  (attr smd)
+  (fp_text
+   reference
+   500mA
+   (at -0.1 -2.75 270)
+   (layer F.SilkS)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_text
+   value
+   F1
+   (at -0.45 3.2 270)
+   (layer F.Fab)
+   (effects (font (size 1 1) (thickness 0.15))))
+  (fp_line (start 2.47 1.05) (end -2.47 1.05) (layer F.CrtYd) (width 0.05))
+  (fp_line (start 2.47 1.05) (end 2.47 -1.05) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -2.47 -1.05) (end -2.47 1.05) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -2.47 -1.05) (end 2.47 -1.05) (layer F.CrtYd) (width 0.05))
+  (fp_line (start -1 -1.07) (end 1 -1.07) (layer F.SilkS) (width 0.12))
+  (fp_line (start 1 1.07) (end -1 1.07) (layer F.SilkS) (width 0.12))
+  (fp_line (start -1.6 -0.8) (end 1.6 -0.8) (layer F.Fab) (width 0.1))
+  (fp_line (start 1.6 -0.8) (end 1.6 0.8) (layer F.Fab) (width 0.1))
+  (fp_line (start 1.6 0.8) (end -1.6 0.8) (layer F.Fab) (width 0.1))
+  (fp_line (start -1.6 0.8) (end -1.6 -0.8) (layer F.Fab) (width 0.1))
+  (pad
+   1
+   smd
+   rect
+   (at -1.2 0)
+   (size 2.03 1.14)
+   (layers F.Cu F.Paste F.Mask)
+   (net 63 VCC))
+  (pad
+   2
+   smd
+   rect
+   (at 1.2 0)
+   (size 2.03 1.14)
+   (layers F.Cu F.Paste F.Mask)
+   (net 102 +5V)))
 (gr_line (start 31 22) (end 84 22) (angle 90) (layer Edge.Cuts) (width 0.3))
 (gr_line (start 84 22) (end 127 30) (angle 90) (layer Edge.Cuts) (width 0.3))
 (gr_line (start 141 30) (end 185 22) (angle 90) (layer Edge.Cuts) (width 0.3))

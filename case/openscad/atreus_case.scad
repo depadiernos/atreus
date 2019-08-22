@@ -40,7 +40,7 @@ switch_hole_size = 14;
 
 /* Sets whether the case should use notched holes. As far as I can
    tell these notches are not all that useful... */
-use_notched_holes = true;
+use_notched_holes = false;
 
 /* Number of rows and columns in the matrix. You need to update
    staggering_offsets if you change n_cols. */
@@ -161,7 +161,7 @@ module right_half (switch_holes=true, key_size=key_hole_size) {
      spacer(). */
   x_offset = 0.5 * row_spacing;
   y_offset = 0.5 * column_spacing;
-  thumb_key_offset = y_offset + 0.5 * column_spacing;
+  thumb_key_offset = y_offset + 3;
   rotate_half() {
     add_hand_separation() {
       for (j=[0:(n_thumb_keys-1)]) {
@@ -312,9 +312,9 @@ module quartered_spacer()
 }
 
 /* Create all four layers. */
-top_plate();
-translate([300, 0]) { switch_plate(); }
-translate([0, 150]) { bottom_plate(); }
+translate([300, 0]) top_plate();
+translate([0, 0]) switch_plate();
+translate([0, 150]) bottom_plate();
 translate([300, 150]) {
   if (quarter_spacer == true) {
     quartered_spacer();

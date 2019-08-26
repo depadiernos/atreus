@@ -81,7 +81,7 @@
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
-     (at 134 45 270)
+     (at 134 48 270)
      (path /543EEB02)
      (fp_text reference Promicro (at 10 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))

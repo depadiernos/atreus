@@ -250,6 +250,8 @@ module bottom_plate() {
   difference() {
     hull() { screw_holes(washer_radius); }
     screw_holes(screw_hole_radius);
+    translate([-20, 98]){circle(1.5);}
+    translate([20, 98]){circle(1.5);}
   }
 }
 
@@ -268,6 +270,8 @@ module switch_plate() {
     bottom_plate();
     right_half();
     left_half();
+    translate([-10, 49]){square([20,50], 10);}
+    translate([-5, 98]){square([10, 20]);}
   }
 }
 
@@ -312,9 +316,10 @@ module quartered_spacer()
 }
 
 /* Create all four layers. */
-translate([300, 0]) top_plate();
+//translate([300, 0]) top_plate();
 translate([0, 0]) switch_plate();
-translate([0, 150]) bottom_plate();
+//translate([0, 150]) bottom_plate();
+/*
 translate([300, 150]) {
   if (quarter_spacer == true) {
     quartered_spacer();
@@ -323,3 +328,4 @@ translate([300, 150]) {
     spacer();
   }
 }
+*/

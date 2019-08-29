@@ -88,10 +88,10 @@
      (fp_line (start -2.1 -1.7) (end 2.1 -1.7) (layer F.CrtYd) (width 0.05))
      (fp_line (start 2.1 -1.7) (end 2.1 1.7) (layer F.CrtYd) (width 0.05))
      (fp_line (start 2.1 1.7) (end -2.1 1.7) (layer F.CrtYd) (width 0.05))
-     (pad 1 smd rect (at -1.1 -0.85 180) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-a)
-     (pad 2 smd rect (at 1.1 -0.85 180) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-gnd)
-     (pad 3 smd rect (at 1.1 0.85 180) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-b)
-     (pad 4 smd rect (at -1.1 0.85 180) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-gnd)))
+     (pad 1 smd rect (at -1.1 -0.85 ,(+ rotation 180)) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-a)
+     (pad 2 smd rect (at 1.1 -0.85 ,(+ rotation 180)) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-gnd)
+     (pad 3 smd rect (at 1.1 0.85 ,(+ rotation 180)) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-b)
+     (pad 4 smd rect (at -1.1 0.85 ,(+ rotation 180)) (size 1.4 1.2) (layers F.Cu F.Paste F.Mask) ,net-gnd)))
 
 
 (define (diode-module x y rotation label net-pos net-neg)
@@ -205,8 +205,8 @@
      (tags "capacitor 0805")
      (path /5C341D22)
      (attr smd)
-     (fp_text reference ,refer (at -3 0 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
-     (fp_text value ,cvalue (at 0 -1.75 90) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
+     (fp_text reference ,refer (at -3 0 ,rotation) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
+     (fp_text value ,cvalue (at 0 1.75 ,(+ rotation 90)) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -1 -0.62) (end -1 0.62) (layer F.Fab) (width 0.1))
      (fp_line (start 1 -0.62) (end -1 -0.62) (layer F.Fab) (width 0.1))
      (fp_line (start 1 0.62) (end 1 -0.62) (layer F.Fab) (width 0.1))
@@ -217,8 +217,8 @@
      (fp_line (start -1.75 0.88) (end -1.75 -0.87) (layer F.CrtYd) (width 0.05))
      (fp_line (start 1.75 -0.87) (end 1.75 0.88) (layer F.CrtYd) (width 0.05))
      (fp_line (start 1.75 -0.87) (end -1.75 -0.87) (layer F.CrtYd) (width 0.05))
-     (pad 1 smd rect (at -1 0 90) (size 1 1.25) (layers F.Cu F.Paste F.Mask) ,net-neg)
-     (pad 2 smd rect (at 1 0 90) (size 1 1.25) (layers F.Cu F.Paste F.Mask) ,net-pos)))
+     (pad 1 smd rect (at -1 0 ,(+ rotation 90)) (size 1 1.25) (layers F.Cu F.Paste F.Mask) ,net-neg)
+     (pad 2 smd rect (at 1 0 ,(+ rotation 90)) (size 1 1.25) (layers F.Cu F.Paste F.Mask) ,net-pos)))
 
 (define (resistor-module x y rotation refer rvalue net-pos net-neg)
   `(module Resistors_SMD:R_0805 (layer F.Cu) (tedit 58E0A804) (tstamp 5C3454AB)
@@ -227,8 +227,8 @@
      (tags "resistor 0805")
      (path /5C33F6F4)
      (attr smd)
-     (fp_text reference ,refer (at -3 0 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
-     (fp_text value ,rvalue (at 0 -1.75 90) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
+     (fp_text reference ,refer (at -3 0 ,rotation) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
+     (fp_text value ,rvalue (at 0 -1.75 ,(+ rotation 90)) (layer F.Fab) (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -1 -0.62) (end -1 0.62) (layer F.Fab) (width 0.1))
      (fp_line (start 1 -0.62) (end -1 -0.62) (layer F.Fab) (width 0.1))
      (fp_line (start 1 0.62) (end 1 -0.62) (layer F.Fab) (width 0.1))
@@ -392,9 +392,9 @@
     (list (switch row col) (diode row col))))
 
 (define crystal+capacitor
-  (list (capacitor-module 135 90 270 "C1" "22pf" `(net 117 Net-C1-Pad1) `(net 105 GND))
-        (capacitor-module 125 90 90  "C2" "22pf" `(net 116 Net-C2-Pad1) `(net 105 GND))
-        (crystal-module   130 90 180 "CR" `(net 117 Net-C1-Pad1) `(net 116 Net-C2-Pad1) `(net 105 GND))))
+  (list (capacitor-module 135.5 90 45  "C1" "22pf" `(net 117 Net-C1-Pad1) `(net 105 GND))
+        (capacitor-module 129.5 90 135 "C2" "22pf" `(net 116 Net-C2-Pad1) `(net 105 GND))
+        (crystal-module   132.5 87 225 "CR" `(net 117 Net-C1-Pad1) `(net 116 Net-C2-Pad1) `(net 105 GND))))
 
 (define usb+resistor+fuse
   (list (usb-mini-module 134 32 270 "REF**" `(net 105 GND) `(net 94 Net-USB1-Pad2) `(net 68 D+) `(net 67 D-) `(net 63 VCC))
@@ -405,11 +405,11 @@
 (define atmega+capacitor+resistor
   (list atmega-module
         (capacitor-module 120 75 270 "C3" "1uf"   `(net 106 Net-C3-Pad1) `(net 105 GND))
-        (capacitor-module 123 85 90  "C4" "0.1uf" `(net 102 +5V) `(net 105 GND))
+        (capacitor-module 123 90 135 "C4" "0.1uf" `(net 102 +5V) `(net 105 GND))
         (capacitor-module 145 75 90  "C5" "0.1uf" `(net 102 +5V) `(net 105 GND))
         (capacitor-module 140 65 0   "C6" "0.1uf" `(net 102 +5V) `(net 105 GND))
         (capacitor-module 123 70 90  "C7" "10uf"  `(net 102 +5V) `(net 105 GND))
-        (resistor-module  123 80 270 "R1" "10k"   `(net 102 +5V) `(net 113 Net-R1-Pad2))
+        (resistor-module  123 84 0   "R1" "10k"   `(net 102 +5V) `(net 113 Net-R1-Pad2))
         (resistor-module  145 70 270 "R4" "10k"   `(net 105 GND) `(net 133 Net-R4-Pad2))))
 
 (define edge-cuts

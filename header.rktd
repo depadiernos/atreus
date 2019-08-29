@@ -91,7 +91,7 @@
       (outputdirectory "atrgbr/"))
   )
 
-  (gr_text AtreuSMD (at 137 85) (layer F.SilkS)
+  (gr_text AtreuSMD (at 134 44) (layer F.SilkS)
     (effects (font (size 4 3) (thickness 0.3048)))
   )
   (gr_text "Phil Hagelberg & Greasy Shit Gang" (at 107 31 350) (layer F.SilkS)

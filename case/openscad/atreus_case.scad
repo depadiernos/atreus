@@ -5,13 +5,13 @@
 $fn = 50;
 
 /* Distance between key centers. */
-column_spacing   = 19;
+column_spacing   = 18;
 row_spacing      = column_spacing;
 
 /* This number should exceed row_spacing and column_spacing. The
  default gives a 1mm = (20mm - 19mm) gap between keycaps and cuts in
  the top plate.*/
-key_hole_size = 20;
+key_hole_size = 19;
 
 /* rotation angle; the angle between the halves is twice this
    number */
@@ -31,7 +31,7 @@ washer_radius     = 4 * screw_hole_radius;
 back_screw_hole_offset = 0;
 
 /* Distance between halves. */
-hand_separation        = 0;
+hand_separation        = 8;
 
 /* The approximate size of switch holes. Used to determine how
    thick walls can be, i.e. how much room around each switch hole to
@@ -55,7 +55,7 @@ cable_hole_width = 12;
 
 /* Vertical column staggering offsets. The first element should
    be zero. */
-staggering_offsets = [0, 5, 11, 6, 3];
+staggering_offsets = [0, 5, 11, 6, -4];
 
 /* Whether or not to split the spacer into quarters. */
 quarter_spacer = false;
@@ -161,7 +161,7 @@ module right_half (switch_holes=true, key_size=key_hole_size) {
      spacer(). */
   x_offset = 0.5 * row_spacing;
   y_offset = 0.5 * column_spacing;
-  thumb_key_offset = y_offset + 3;
+  thumb_key_offset = y_offset + 0;
   rotate_half() {
     add_hand_separation() {
       for (j=[0:(n_thumb_keys-1)]) {

@@ -764,7 +764,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 30.87048249320629 75.35086260162737 -10)
+  (at 30.8704824932063 75.35086260162736 -10)
   (path /543DB910)
   (fp_text
    reference
@@ -845,7 +845,7 @@
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 39.87048249320629 75.35086260162737 80)
+  (at 39.870482493206296 75.35086260162736 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -1336,7 +1336,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 50.333503824095345 68.62845226951004 -10)
+  (at 50.333503824095345 68.62845226951003 -10)
   (path /543DB910)
   (fp_text
    reference
@@ -1417,7 +1417,7 @@
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 59.333503824095345 68.62845226951004 80)
+  (at 59.333503824095345 68.62845226951003 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -2480,7 +2480,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 85.6129347548679 75.86459441853174 -10)
+  (at 85.61293475486791 75.86459441853172 -10)
   (path /543DB910)
   (fp_text
    reference
@@ -2561,7 +2561,7 @@
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 94.6129347548679 75.86459441853174 80)
+  (at 94.61293475486791 75.86459441853172 80)
   (path /543DB90F)
   (attr smd)
   (fp_text

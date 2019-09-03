@@ -3,13 +3,13 @@
 (define cols 12)
 (define rows 4)
 
-(define x-offset 20)
-(define y-offset 20)
+(define x-offset 22)
+(define y-offset 22)
 
-(define spacing 19)
+(define spacing 18)
 (define angle 10)
 
-(define column-offsets '(8 5 0 6 11 65 65 11 6 0 5 8))
+(define column-offsets '(15 5 0 6 11 65 65 11 6 0 5 15))
 
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
@@ -18,10 +18,10 @@
      (path /543DB910) ; TODO: this is not documented; no idea what it does
      (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS)
               (effects (font (size 1.524 1.778) (thickness 0.254))))
-     (fp_line (start -9.525 9.525) (end -9.525 -9.525) (layer Dwgs.User) (width 0.15))
-     (fp_line (start 9.525 9.525) (end -9.525 9.525) (layer Dwgs.User) (width 0.15))
-     (fp_line (start 9.525 -9.525) (end 9.525 9.525) (layer Dwgs.User) (width 0.15))
-     (fp_line (start -9.525 -9.525) (end 9.525 -9.525) (layer Dwgs.User) (width 0.15))
+     (fp_line (start -9.025 9.025) (end -9.025 -9.025) (layer Dwgs.User) (width 0.15))
+     (fp_line (start 9.025 9.025) (end -9.025 9.025) (layer Dwgs.User) (width 0.15))
+     (fp_line (start 9.025 -9.025) (end 9.025 9.025) (layer Dwgs.User) (width 0.15))
+     (fp_line (start -9.025 -9.025) (end 9.025 -9.025) (layer Dwgs.User) (width 0.15))
      (fp_line (start -7 -7) (end -7 -5) (layer Dwgs.User) (width 0.15))
      (fp_line (start -5 -7) (end -7 -7) (layer Dwgs.User) (width 0.15))
      (fp_line (start -7 7) (end -5 7) (layer Dwgs.User) (width 0.15))
@@ -31,23 +31,12 @@
      (fp_line (start 7 -7) (end 7 -5) (layer Dwgs.User) (width 0.15))
      (fp_line (start 5 -7) (end 7 -7) (layer Dwgs.User) (width 0.15))
 
-     (pad "" np_thru_hole circle (at -5.22 4.2 ,(+ 48.1 rotation)) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at -5.08 0 ,(+ 48.1 rotation)) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at -5.5 0 ,(+ 48.1 rotation)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 0 0 ,rotation) (size 3.9878 3.9878) (drill 3.9878) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 5.08 0 ,(+ 48.1 rotation)) (size 1.75 1.75) (drill 1.75) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 5.5 0 ,(+ 48.1 rotation)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at -5.5 0 ,(+ rotation 180)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 0 0 ,(+ rotation 180)) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 5.5 0 ,(+ rotation 180)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
 
-     (pad 1 thru_hole circle (at 2.54 -5.08 ,rotation) (size 2.25 2.25) (drill 1.47) (layers *.Cu *.Mask) ,net-pos)
      (pad 1 thru_hole circle (at 5 -3.8 ,rotation) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)
-     (pad 1 thru_hole oval (at 2.5 -4.5 96.1) (size 2.831378 2.25) (drill 1.47 (offset 0.290689 0)) (layers *.Cu *.Mask) ,net-pos)
-
-     (pad 2 thru_hole circle (at -2.5 -4 ,rotation) (size 2.25 2.25) (drill 1.47) (layers *.Cu *.Mask) ,net-neg)
-     (pad 2 thru_hole circle (at 0 -5.9 ,rotation) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)
-     (pad 2 thru_hole oval (at -3.81 -2.54 ,(+ 48.1 rotation)) (size 4.211556 2.25) (drill 1.47 (offset 0.980778 0)) (layers *.Cu *.Mask) ,net-neg)
-
-     )
-  )
+     (pad 2 thru_hole circle (at 0 -5.9 ,rotation) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)))
 
 (define (diode-module x y rotation label net-pos net-neg)
   `(module DIODE (layer Front) (tedit 4E0F7A99) (tstamp 543EF854)
@@ -56,28 +45,19 @@
      (attr smd)
      (fp_text reference ,label (at 6 0 ,rotation) (layer F.SilkS) hide (effects (font (size 1.016 1.016) (thickness 0.2032))))
      (fp_text value "" (at 0 0 80) (layer F.SilkS) (effects (font (size 1.27 1.27) (thickness 0.15))))
-     (fp_line (start -2.54 0.762) (end 2.54 0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.54 0.762) (end 2.54 -0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.54 -0.762) (end -2.54 -0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start -2.54 -0.762) (end -2.54 0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start -2.54 0.762) (end -2.032 0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.159 0.762) (end 2.159 -0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.286 -0.762) (end 2.286 0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.413 0.762) (end 2.413 -0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 2.032 -0.762) (end 2.032 0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 1.905 0.762) (end 1.905 -0.762) (layer F.SilkS) (width 0.15))
-     (fp_line (start 1.778 0.762) (end 1.778 -0.762) (layer F.SilkS) (width 0.15))
-     (pad 1 smd rect (at 1.4 0 ,(+ 90 rotation)) (size 1.6 1.2) (layers Back B.Paste B.Mask) ,net-pos)
-     (pad 1 smd rect (at 1.4 0 ,(+ 90 rotation)) (size 1.6 1.2) (layers Front F.Paste F.Mask) ,net-pos)
-     (pad 1 smd rect (at 2.5 0 ,(+ 90 rotation)) (size 2.9 0.5) (layers Back) ,net-pos)
-     (pad 1 smd rect (at 2.5 0 ,(+ 90 rotation)) (size 2.9 0.5) (layers Front) ,net-pos)
-     (pad 2 smd rect (at -1.4 0 ,(+ 90 rotation)) (size 1.6 1.2) (layers Back B.Paste B.Mask) ,net-neg)
-     (pad 2 smd rect (at -1.4 0 ,(+ 90 rotation)) (size 1.6 1.2) (layers Front F.Paste F.Mask) ,net-neg)
-     (pad 2 smd rect (at -2.5 0 ,(+ 90 rotation)) (size 2.9 0.5) (layers Back) ,net-neg)
-     (pad 2 smd rect (at -2.5 0 ,(+ 90 rotation)) (size 2.9 0.5) (layers Front) ,net-neg)
 
-     (pad 1 thru_hole rect (at 3.9 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
-     (pad 2 thru_hole circle (at -3.9 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
+     (fp_line (start 0.9 1.1) (end 0.9 -1.1) (layer F.SilkS) (width 0.15))
+     (fp_line (start 1.1 -1.1) (end 1.1 1.1) (layer F.SilkS) (width 0.15))
+     (fp_line (start 1.3 -1) (end 1.3 -1.1) (layer F.SilkS) (width 0.15))
+     (fp_line (start 1.3 -1.1) (end 1.3 -1) (layer F.SilkS) (width 0.15))
+     (fp_line (start 1.3 1.1) (end 1.3 -1) (layer F.SilkS) (width 0.15))
+     (fp_line (start -1.524 -1.143) (end 1.524 -1.143) (layer F.SilkS) (width 0.2032))
+     (fp_line (start 1.524 -1.143) (end 1.524 1.143) (layer F.SilkS) (width 0.2032))
+     (fp_line (start 1.524 1.143) (end -1.524 1.143) (layer F.SilkS) (width 0.2032))
+     (fp_line (start -1.524 1.143) (end -1.524 -1.143) (layer F.SilkS) (width 0.2032))
+
+     (pad 1 thru_hole rect (at 3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
+     (pad 2 thru_hole circle (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
@@ -152,8 +132,8 @@
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′)))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885)) (* hypotenuse (sin Θ′)))]
+         [x′ (+ (if left? x-offset 15.5) (* hypotenuse (cos Θ′)))]
+         [y′ (+ (if left? y-offset (+ y-offset 40.60)) (* hypotenuse (sin Θ′)))]
          [label (format "SW~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
@@ -182,10 +162,8 @@
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′))
-                (if left? 9 -9))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885))
-                (* hypotenuse (sin Θ′)))]
+         [x′ (+ (if left? x-offset 15.5) (* hypotenuse (cos Θ′)) (if left? 9 -9))]
+         [y′ (+ (if left? y-offset (+ y-offset 40.60)) (* hypotenuse (sin Θ′)))]
          [label (format "D~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
@@ -210,8 +188,8 @@
     (list (switch row col) (diode row col))))
 
 (define edge-cuts
-  (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22] [250 95]  [161 112] [107 112] [18 95]))
-             (e '([84 22] [127 30] [185 22] [141 30] [237 22] [250 95] [161 112] [107 112] [18 95]   [31 22]))]
+  (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22]  [251 100] [161 112] [107 112] [17 100]))
+             (e '([84 22] [127 30] [185 22] [141 30] [237 22] [251 100] [161 112] [107 112] [17  100] [31 22]))]
     `(gr_line (start ,@s) (end ,@e) (angle 90) (layer Edge.Cuts) (width 0.3))))
 
 (define board

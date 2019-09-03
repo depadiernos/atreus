@@ -103,7 +103,7 @@
   (gr_text http://atreus.technomancy.us (at 63 100.5 350) (layer F.SilkS)
     (effects (font (size 2.032 1.524) (thickness 0.3048)))
   )
-  (gr_text "rev 2.6, Sept. 2019" (at 200.5 101.5 10) (layer F.SilkS)
+  (gr_text "rev 2.6-choc, Sept. 2019" (at 200.5 101.5 10) (layer F.SilkS)
     (effects (font (size 2.032 1.524) (thickness 0.3048)))
   )
   (gr_text "© 2014 & 2019" (at 134 86) (layer F.SilkS)

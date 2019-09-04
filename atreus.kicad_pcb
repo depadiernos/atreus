@@ -478,7 +478,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 37.121816889215786 39.89778349318787 -10)
+  (at 37.121816889215786 39.89778349318787 170)
   (path /543DB910)
   (fp_text
    reference
@@ -518,15 +518,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -534,7 +534,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -542,20 +550,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 16 N-diode-0))
+   (net 5 N-col-0))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 5 N-col-0)))
+   (net 16 N-diode-0)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -621,7 +629,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 33.99614969121104 57.624323047407614 -10)
+  (at 33.99614969121104 57.624323047407614 170)
   (path /543DB910)
   (fp_text
    reference
@@ -661,15 +669,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -677,7 +685,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -685,20 +701,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 17 N-diode-1))
+   (net 5 N-col-0))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 5 N-col-0)))
+   (net 17 N-diode-1)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -764,7 +780,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 30.8704824932063 75.35086260162736 -10)
+  (at 30.87048249320629 75.35086260162737 170)
   (path /543DB910)
   (fp_text
    reference
@@ -804,15 +820,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -820,7 +836,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -828,24 +852,24 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 18 N-diode-2))
+   (net 5 N-col-0))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 5 N-col-0)))
+   (net 18 N-diode-2)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 39.870482493206296 75.35086260162736 80)
+  (at 39.87048249320629 75.35086260162737 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -907,7 +931,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 27.74481529520155 93.0774021558471 -10)
+  (at 27.74481529520155 93.0774021558471 170)
   (path /543DB910)
   (fp_text
    reference
@@ -947,15 +971,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -963,7 +987,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -971,20 +1003,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 19 N-diode-3))
+   (net 5 N-col-0))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 5 N-col-0)))
+   (net 19 N-diode-3)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1050,7 +1082,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 56.584838220104835 33.17537316107053 -10)
+  (at 56.584838220104835 33.17537316107053 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1090,15 +1122,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1106,7 +1138,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1114,20 +1154,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 20 N-diode-4))
+   (net 6 N-col-1))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 6 N-col-1)))
+   (net 20 N-diode-4)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1193,7 +1233,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 53.459171022100094 50.90191271529028 -10)
+  (at 53.459171022100094 50.90191271529028 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1233,15 +1273,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1249,7 +1289,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1257,20 +1305,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 21 N-diode-5))
+   (net 6 N-col-1))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 6 N-col-1)))
+   (net 21 N-diode-5)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1336,7 +1384,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 50.333503824095345 68.62845226951003 -10)
+  (at 50.333503824095345 68.62845226951004 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1376,15 +1424,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1392,7 +1440,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1400,24 +1456,24 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 22 N-diode-6))
+   (net 6 N-col-1))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 6 N-col-1)))
+   (net 22 N-diode-6)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 59.333503824095345 68.62845226951003 80)
+  (at 59.333503824095345 68.62845226951004 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -1479,7 +1535,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 47.2078366260906 86.35499182372978 -10)
+  (at 47.2078366260906 86.35499182372978 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1519,15 +1575,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1535,7 +1591,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1543,20 +1607,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 23 N-diode-7))
+   (net 6 N-col-1))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 6 N-col-1)))
+   (net 23 N-diode-7)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1622,7 +1686,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 75.17961866265924 31.37700159401424 -10)
+  (at 75.17961866265924 31.37700159401424 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1662,15 +1726,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1678,7 +1742,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1686,20 +1758,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 24 N-diode-8))
+   (net 7 N-col-2))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 7 N-col-2)))
+   (net 24 N-diode-8)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1765,7 +1837,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 72.05395146465449 49.10354114823398 -10)
+  (at 72.05395146465449 49.10354114823398 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1805,15 +1877,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1821,7 +1893,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1829,20 +1909,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 25 N-diode-9))
+   (net 7 N-col-2))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 7 N-col-2)))
+   (net 25 N-diode-9)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -1908,7 +1988,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 68.92828426664974 66.83008070245373 -10)
+  (at 68.92828426664974 66.83008070245373 170)
   (path /543DB910)
   (fp_text
    reference
@@ -1948,15 +2028,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -1964,7 +2044,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -1972,20 +2060,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 26 N-diode-10))
+   (net 7 N-col-2))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 7 N-col-2)))
+   (net 26 N-diode-10)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2051,7 +2139,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 65.802617068645 84.55662025667348 -10)
+  (at 65.802617068645 84.55662025667348 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2091,15 +2179,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2107,7 +2195,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2115,20 +2211,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 27 N-diode-11))
+   (net 7 N-col-2))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 7 N-col-2)))
+   (net 27 N-diode-11)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2194,7 +2290,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 91.86426915087739 40.41151531009223 -10)
+  (at 91.86426915087739 40.41151531009223 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2234,15 +2330,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2250,7 +2346,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2258,20 +2362,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 28 N-diode-12))
+   (net 8 N-col-3))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 8 N-col-3)))
+   (net 28 N-diode-12)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2337,7 +2441,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 88.73860195287266 58.138054864311975 -10)
+  (at 88.73860195287266 58.138054864311975 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2377,15 +2481,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2393,7 +2497,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2401,20 +2513,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 29 N-diode-13))
+   (net 8 N-col-3))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 8 N-col-3)))
+   (net 29 N-diode-13)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2480,7 +2592,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 85.61293475486791 75.86459441853172 -10)
+  (at 85.6129347548679 75.86459441853174 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2520,15 +2632,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2536,7 +2648,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2544,24 +2664,24 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 30 N-diode-14))
+   (net 8 N-col-3))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 8 N-col-3)))
+   (net 30 N-diode-14)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
-  (at 94.61293475486791 75.86459441853172 80)
+  (at 94.6129347548679 75.86459441853174 80)
   (path /543DB90F)
   (attr smd)
   (fp_text
@@ -2623,7 +2743,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 82.48726755686315 93.59113397275148 -10)
+  (at 82.48726755686315 93.59113397275148 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2663,15 +2783,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2679,7 +2799,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2687,20 +2815,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 31 N-diode-15))
+   (net 8 N-col-3))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 8 N-col-3)))
+   (net 31 N-diode-15)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2766,7 +2894,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 108.72256781676249 48.46122127315802 -10)
+  (at 108.72256781676249 48.46122127315802 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2806,15 +2934,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2822,7 +2950,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2830,20 +2966,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 32 N-diode-16))
+   (net 9 N-col-4))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 9 N-col-4)))
+   (net 32 N-diode-16)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -2909,7 +3045,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 105.59690061875774 66.18776082737776 -10)
+  (at 105.59690061875774 66.18776082737776 170)
   (path /543DB910)
   (fp_text
    reference
@@ -2949,15 +3085,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -2965,7 +3101,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -2973,20 +3117,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 33 N-diode-17))
+   (net 9 N-col-4))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 9 N-col-4)))
+   (net 33 N-diode-17)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3052,7 +3196,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 102.471233420753 83.91430038159751 -10)
+  (at 102.471233420753 83.91430038159751 170)
   (path /543DB910)
   (fp_text
    reference
@@ -3092,15 +3236,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3108,7 +3252,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3116,20 +3268,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 34 N-diode-18))
+   (net 9 N-col-4))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 9 N-col-4)))
+   (net 34 N-diode-18)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3195,7 +3347,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 99.34556622274825 101.64083993581725 -10)
+  (at 99.34556622274825 101.64083993581725 170)
   (path /543DB910)
   (fp_text
    reference
@@ -3235,15 +3387,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 170)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 170)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3251,7 +3403,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 170)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3259,20 +3419,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 -10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 35 N-diode-19))
+   (net 9 N-col-4))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 -10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 9 N-col-4)))
+   (net 35 N-diode-19)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3338,7 +3498,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 117.072105776968 104.76650713382202 80)
+  (at 117.072105776968 104.76650713382202 260)
   (path /543DB910)
   (fp_text
    reference
@@ -3378,15 +3538,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 260)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 260)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3394,7 +3554,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 260)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3402,20 +3570,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 80)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 36 N-diode-20))
+   (net 10 N-col-5))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 80)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 10 N-col-5)))
+   (net 36 N-diode-20)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3481,7 +3649,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 150.8729084278887 104.73283355976031 280)
+  (at 150.8729084278887 104.73283355976031 460)
   (path /543DB910)
   (fp_text
    reference
@@ -3521,15 +3689,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 460)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 460)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3537,7 +3705,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 460)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3545,20 +3721,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 280)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 10 N-col-5))
+   (net 40 N-diode-24))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 280)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 40 N-diode-24)))
+   (net 10 N-col-5)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3624,7 +3800,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 159.2224463880942 48.42754769909632 10)
+  (at 159.2224463880942 48.42754769909632 190)
   (path /543DB910)
   (fp_text
    reference
@@ -3664,15 +3840,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3680,7 +3856,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3688,20 +3872,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 11 N-col-6))
+   (net 44 N-diode-28))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 44 N-diode-28)))
+   (net 11 N-col-6)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3767,7 +3951,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 162.34811358609895 66.15408725331606 10)
+  (at 162.34811358609895 66.15408725331606 190)
   (path /543DB910)
   (fp_text
    reference
@@ -3807,15 +3991,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3823,7 +4007,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3831,20 +4023,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 11 N-col-6))
+   (net 45 N-diode-29))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 45 N-diode-29)))
+   (net 11 N-col-6)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -3910,7 +4102,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 165.47378078410367 83.8806268075358 10)
+  (at 165.47378078410367 83.8806268075358 190)
   (path /543DB910)
   (fp_text
    reference
@@ -3950,15 +4142,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -3966,7 +4158,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -3974,20 +4174,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 11 N-col-6))
+   (net 46 N-diode-30))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 46 N-diode-30)))
+   (net 11 N-col-6)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4053,7 +4253,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 168.59944798210842 101.60716636175556 10)
+  (at 168.59944798210842 101.60716636175556 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4093,15 +4293,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4109,7 +4309,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4117,20 +4325,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 11 N-col-6))
+   (net 47 N-diode-31))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 47 N-diode-31)))
+   (net 11 N-col-6)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4196,7 +4404,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 176.08074505397929 40.37784173603053 10)
+  (at 176.08074505397929 40.37784173603053 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4236,15 +4444,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4252,7 +4460,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4260,20 +4476,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 12 N-col-7))
+   (net 48 N-diode-32))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 48 N-diode-32)))
+   (net 12 N-col-7)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4339,7 +4555,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 179.20641225198403 58.10438129025028 10)
+  (at 179.20641225198403 58.10438129025028 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4379,15 +4595,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4395,7 +4611,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4403,20 +4627,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 12 N-col-7))
+   (net 49 N-diode-33))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 49 N-diode-33)))
+   (net 12 N-col-7)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4482,7 +4706,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 182.33207944998878 75.83092084447003 10)
+  (at 182.33207944998878 75.83092084447003 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4522,15 +4746,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4538,7 +4762,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4546,20 +4778,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 12 N-col-7))
+   (net 50 N-diode-34))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 50 N-diode-34)))
+   (net 12 N-col-7)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4625,7 +4857,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 185.45774664799353 93.55746039868976 10)
+  (at 185.45774664799353 93.55746039868976 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4665,15 +4897,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4681,7 +4913,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4689,20 +4929,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 12 N-col-7))
+   (net 51 N-diode-35))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 51 N-diode-35)))
+   (net 12 N-col-7)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4768,7 +5008,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 192.76539554219744 31.34332801995254 10)
+  (at 192.76539554219744 31.34332801995254 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4808,15 +5048,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4824,7 +5064,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4832,20 +5080,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 13 N-col-8))
+   (net 52 N-diode-36))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 52 N-diode-36)))
+   (net 13 N-col-8)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -4911,7 +5159,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 195.8910627402022 49.06986757417229 10)
+  (at 195.8910627402022 49.06986757417229 190)
   (path /543DB910)
   (fp_text
    reference
@@ -4951,15 +5199,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -4967,7 +5215,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -4975,20 +5231,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 13 N-col-8))
+   (net 53 N-diode-37))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 53 N-diode-37)))
+   (net 13 N-col-8)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5054,7 +5310,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 199.01672993820694 66.79640712839203 10)
+  (at 199.01672993820694 66.79640712839203 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5094,15 +5350,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5110,7 +5366,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5118,20 +5382,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 13 N-col-8))
+   (net 54 N-diode-38))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 54 N-diode-38)))
+   (net 13 N-col-8)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5197,7 +5461,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 202.14239713621168 84.52294668261177 10)
+  (at 202.14239713621168 84.52294668261177 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5237,15 +5501,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5253,7 +5517,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5261,20 +5533,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 13 N-col-8))
+   (net 55 N-diode-39))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 55 N-diode-39)))
+   (net 13 N-col-8)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5340,7 +5612,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 211.36017598475186 33.14169958700883 10)
+  (at 211.36017598475186 33.14169958700883 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5380,15 +5652,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5396,7 +5668,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5404,20 +5684,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 14 N-col-9))
+   (net 56 N-diode-40))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 56 N-diode-40)))
+   (net 14 N-col-9)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5483,7 +5763,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 214.48584318275658 50.86823914122858 10)
+  (at 214.48584318275658 50.86823914122858 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5523,15 +5803,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5539,7 +5819,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5547,20 +5835,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 14 N-col-9))
+   (net 57 N-diode-41))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 57 N-diode-41)))
+   (net 14 N-col-9)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5626,7 +5914,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 217.61151038076136 68.59477869544833 10)
+  (at 217.61151038076136 68.59477869544833 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5666,15 +5954,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5682,7 +5970,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5690,20 +5986,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 14 N-col-9))
+   (net 37 N-diode-21))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 37 N-diode-21)))
+   (net 14 N-col-9)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5769,7 +6065,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 220.73717757876608 86.32131824966807 10)
+  (at 220.73717757876608 86.32131824966807 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5809,15 +6105,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5825,7 +6121,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5833,20 +6137,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 14 N-col-9))
+   (net 38 N-diode-22))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 38 N-diode-22)))
+   (net 14 N-col-9)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -5912,7 +6216,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 230.8231973156409 39.86410991912617 10)
+  (at 230.8231973156409 39.86410991912617 190)
   (path /543DB910)
   (fp_text
    reference
@@ -5952,15 +6256,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -5968,7 +6272,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -5976,20 +6288,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 15 N-col-10))
+   (net 39 N-diode-23))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 39 N-diode-23)))
+   (net 15 N-col-10)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -6055,7 +6367,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 233.94886451364565 57.59064947334592 10)
+  (at 233.94886451364565 57.59064947334592 190)
   (path /543DB910)
   (fp_text
    reference
@@ -6095,15 +6407,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -6111,7 +6423,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -6119,20 +6439,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 15 N-col-10))
+   (net 41 N-diode-25))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 41 N-diode-25)))
+   (net 15 N-col-10)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -6198,7 +6518,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 237.07453171165037 75.31718902756566 10)
+  (at 237.07453171165037 75.31718902756566 190)
   (path /543DB910)
   (fp_text
    reference
@@ -6238,15 +6558,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -6254,7 +6574,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -6262,20 +6590,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 15 N-col-10))
+   (net 42 N-diode-26))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 42 N-diode-26)))
+   (net 15 N-col-10)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -6341,7 +6669,7 @@
 (module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front)
   (tedit 4FD81CDD)
   (tstamp 543EF801)
-  (at 240.20019890965511 93.04372858178539 10)
+  (at 240.20019890965511 93.04372858178539 190)
   (path /543DB910)
   (fp_text
    reference
@@ -6381,15 +6709,15 @@
    ""
    np_thru_hole
    circle
-   (at -5.5 0 190)
-   (size 1.7 1.7)
-   (drill 1.7)
+   (at 5.22 -4.2 180)
+   (size 1.2 1.2)
+   (drill 1.2)
    (layers *.Cu *.Mask))
   (pad
    ""
    np_thru_hole
    circle
-   (at 0 0 190)
+   (at 0 0 180)
    (size 3.4 3.4)
    (drill 3.4)
    (layers *.Cu *.Mask))
@@ -6397,7 +6725,15 @@
    ""
    np_thru_hole
    circle
-   (at 5.5 0 190)
+   (at -5.5 0 180)
+   (size 1.7 1.7)
+   (drill 1.7)
+   (layers *.Cu *.Mask))
+  (pad
+   ""
+   np_thru_hole
+   circle
+   (at 5.5 0 180)
    (size 1.7 1.7)
    (drill 1.7)
    (layers *.Cu *.Mask))
@@ -6405,20 +6741,20 @@
    1
    thru_hole
    circle
-   (at 5 -3.8 10)
+   (at 0 5.9 180)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 15 N-col-10))
+   (net 43 N-diode-27))
   (pad
    2
    thru_hole
    circle
-   (at 0 -5.9 10)
+   (at -5 3.8 41.9)
    (size 2 2)
    (drill 1.2)
    (layers *.Cu *.Mask)
-   (net 43 N-diode-27)))
+   (net 15 N-col-10)))
 (module DIODE (layer Front)
   (tedit 4E0F7A99)
   (tstamp 543EF854)
@@ -6481,8 +6817,6 @@
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
    (net 4 N-row-3)))
-  (segment (start 186.171537 36.588527) (end 184.373165 34.790155) (width 0.2032) (layer Back) (net 1))
-  (segment (start 202.967945 36.588527) (end 186.171537 36.588527) (width 0.2032) (layer Back) (net 1))
   (segment (start 81.773479 36.6222) (end 83.57185 34.823829) (width 0.2032) (layer Back) (net 1))
   (segment (start 64.977069 36.6222) (end 81.773479 36.6222) (width 0.2032) (layer Back) (net 1))
   (segment (start 150.830215 53.005745) (end 150.830215 51.874375) (width 0.2032) (layer Front) (net 1))
@@ -6515,14 +6849,12 @@
   (segment (start 179.922458 43.824669) (end 168.819884 43.824669) (width 0.2032) (layer Back) (net 1))
   (segment (start 184.373165 34.790155) (end 184.373165 39.373962) (width 0.2032) (layer Back) (net 1))
   (segment (start 184.373165 39.373962) (end 179.922458 43.824669) (width 0.2032) (layer Back) (net 1))
-  (segment (start 189.297203 54.315066) (end 187.498832 52.516695) (width 0.2032) (layer Back) (net 2))
-  (segment (start 206.093612 54.315066) (end 189.297203 54.315066) (width 0.2032) (layer Back) (net 2))
+  (segment (start 201.169573 34.790155) (end 202.967945 36.588527) (width 0.2032) (layer Back) (net 1))
+  (segment (start 184.373165 34.790155) (end 201.169573 34.790155) (width 0.2032) (layer Back) (net 1))
   (segment (start 78.64781 54.34874) (end 80.446182 52.550368) (width 0.2032) (layer Back) (net 2))
   (segment (start 61.851402 54.34874) (end 78.64781 54.34874) (width 0.2032) (layer Back) (net 2))
   (segment (start 153.922209 69.634588) (end 153.955883 69.600914) (width 0.2032) (layer Front) (net 2))
   (segment (start 113.989132 69.634588) (end 153.922209 69.634588) (width 0.2032) (layer Front) (net 2))
-  (segment (start 48.52126 54.34874) (end 61.851402 54.34874) (width 0.2032) (layer Back) (net 2))
-  (segment (start 42.388381 60.481619) (end 48.52126 54.34874) (width 0.2032) (layer Back) (net 2))
   (segment (start 218.145066 54.315066) (end 206.093612 54.315066) (width 0.2032) (layer Back) (net 2))
   (segment (start 225.556634 61.037476) (end 224.867476 61.037476) (width 0.2032) (layer Back) (net 2))
   (segment (start 224.867476 61.037476) (end 218.145066 54.315066) (width 0.2032) (layer Back) (net 2))
@@ -6544,8 +6876,10 @@
   (segment (start 166.619086 69.600914) (end 155.087253 69.600914) (width 0.2032) (layer Back) (net 2))
   (segment (start 170.814181 61.551208) (end 170.814181 65.405819) (width 0.2032) (layer Back) (net 2))
   (segment (start 170.814181 65.405819) (end 166.619086 69.600914) (width 0.2032) (layer Back) (net 2))
-  (segment (start 192.422871 72.041606) (end 190.624499 70.243234) (width 0.2032) (layer Back) (net 3))
-  (segment (start 209.219279 72.041606) (end 192.422871 72.041606) (width 0.2032) (layer Back) (net 3))
+  (segment (start 204.295241 52.516695) (end 206.093612 54.315066) (width 0.2032) (layer Back) (net 2))
+  (segment (start 187.498832 52.516695) (end 204.295241 52.516695) (width 0.2032) (layer Back) (net 2))
+  (segment (start 49.110791 54.34874) (end 61.851402 54.34874) (width 0.2032) (layer Back) (net 2))
+  (segment (start 42.388381 61.07115) (end 49.110791 54.34874) (width 0.2032) (layer Back) (net 2))
   (segment (start 75.522144 72.075279) (end 77.320515 70.276908) (width 0.2032) (layer Back) (net 3))
   (segment (start 58.725735 72.075279) (end 75.522144 72.075279) (width 0.2032) (layer Back) (net 3))
   (segment (start 157.08155 87.327454) (end 143.812546 87.327454) (width 0.2032) (layer Front) (net 3))
@@ -6558,10 +6892,7 @@
   (segment (start 46.034721 72.075279) (end 58.725735 72.075279) (width 0.2032) (layer Back) (net 3))
   (segment (start 39.262713 78.79769) (end 39.31231 78.79769) (width 0.2032) (layer Back) (net 3))
   (segment (start 39.31231 78.79769) (end 46.034721 72.075279) (width 0.2032) (layer Back) (net 3))
-  (segment (start 210.019278 72.841605) (end 209.219279 72.041606) (width 0.2032) (layer Back) (net 3))
-  (segment (start 222.701605 72.841605) (end 210.019278 72.841605) (width 0.2032) (layer Back) (net 3))
   (segment (start 228.682301 78.764016) (end 228.624016 78.764016) (width 0.2032) (layer Back) (net 3))
-  (segment (start 228.624016 78.764016) (end 222.701605 72.841605) (width 0.2032) (layer Back) (net 3))
   (segment (start 109.732094 87.361127) (end 110.863464 87.361127) (width 0.2032) (layer Back) (net 3))
   (segment (start 98.59676 87.361127) (end 109.732094 87.361127) (width 0.2032) (layer Back) (net 3))
   (segment (start 94.005166 79.311421) (end 94.005166 82.769533) (width 0.2032) (layer Back) (net 3))
@@ -6582,8 +6913,12 @@
   (segment (start 151.13 81.375904) (end 156.281551 86.527455) (width 0.2032) (layer Back) (net 3))
   (segment (start 141.62 59.43) (end 151.13 68.94) (width 0.2032) (layer Back) (net 3))
   (segment (start 151.13 68.94) (end 151.13 81.375904) (width 0.2032) (layer Back) (net 3))
-  (segment (start 195.548537 89.768145) (end 193.750166 87.969774) (width 0.2032) (layer Back) (net 4))
-  (segment (start 212.344947 89.768145) (end 195.548537 89.768145) (width 0.2032) (layer Back) (net 4))
+  (segment (start 207.420907 70.243234) (end 209.219279 72.041606) (width 0.2032) (layer Back) (net 3))
+  (segment (start 190.624499 70.243234) (end 207.420907 70.243234) (width 0.2032) (layer Back) (net 3))
+  (segment (start 221.901606 72.041606) (end 223.52 73.66) (width 0.2032) (layer Back) (net 3))
+  (segment (start 209.219279 72.041606) (end 221.901606 72.041606) (width 0.2032) (layer Back) (net 3))
+  (segment (start 228.624016 78.764016) (end 223.52 73.66) (width 0.2032) (layer Back) (net 3))
+  (segment (start 223.52 73.66) (end 222.701605 72.841605) (width 0.2032) (layer Back) (net 3))
   (segment (start 143.280676 107.379662) (end 142.480677 108.179661) (width 0.2032) (layer Back) (net 4))
   (segment (start 143.871903 106.788435) (end 143.280676 107.379662) (width 0.2032) (layer Back) (net 4))
   (segment (start 157.341405 106.788435) (end 143.871903 106.788435) (width 0.2032) (layer Back) (net 4))
@@ -6603,14 +6938,6 @@
   (segment (start 140.170338 110.49) (end 123.19 110.49) (width 0.2032) (layer Back) (net 4))
   (segment (start 123.19 110.49) (end 120.65 107.95) (width 0.2032) (layer Back) (net 4))
   (segment (start 120.65 107.95) (end 110.60013 107.95) (width 0.2032) (layer Back) (net 4))
-  (segment (start 106.606427 105.087667) (end 107.737797 105.087667) (width 0.2032) (layer Back) (net 4))
-  (segment (start 94.927667 105.087667) (end 106.606427 105.087667) (width 0.2032) (layer Back) (net 4))
-  (segment (start 90.879499 97.037961) (end 90.879499 101.039499) (width 0.2032) (layer Back) (net 4))
-  (segment (start 90.879499 101.039499) (end 94.927667 105.087667) (width 0.2032) (layer Back) (net 4))
-  (segment (start 89.748129 97.037961) (end 90.879499 97.037961) (width 0.2032) (layer Back) (net 4))
-  (segment (start 77.987961 97.037961) (end 89.748129 97.037961) (width 0.2032) (layer Back) (net 4))
-  (segment (start 74.194848 88.003447) (end 74.194848 93.244848) (width 0.2032) (layer Back) (net 4))
-  (segment (start 74.194848 93.244848) (end 77.987961 97.037961) (width 0.2032) (layer Back) (net 4))
   (segment (start 178.196886 97.004287) (end 177.065516 97.004287) (width 0.2032) (layer Back) (net 4))
   (segment (start 188.745713 97.004287) (end 178.196886 97.004287) (width 0.2032) (layer Back) (net 4))
   (segment (start 192.950167 92.799833) (end 188.745713 97.004287) (width 0.2032) (layer Back) (net 4))
@@ -6626,6 +6953,15 @@
   (segment (start 142.24 82.55) (end 156.21 96.52) (width 0.2032) (layer Back) (net 4))
   (segment (start 141.62 61.97) (end 142.24 62.59) (width 0.2032) (layer Back) (net 4))
   (segment (start 142.24 62.59) (end 142.24 82.55) (width 0.2032) (layer Back) (net 4))
+  (segment (start 210.546576 87.969774) (end 212.344947 89.768145) (width 0.2032) (layer Back) (net 4))
+  (segment (start 193.750166 87.969774) (end 210.546576 87.969774) (width 0.2032) (layer Back) (net 4))
+  (segment (start 79.257961 97.037961) (end 90.879499 97.037961) (width 0.2032) (layer Back) (net 4))
+  (segment (start 74.194848 88.003447) (end 74.194848 91.974848) (width 0.2032) (layer Back) (net 4))
+  (segment (start 74.194848 91.974848) (end 79.257961 97.037961) (width 0.2032) (layer Back) (net 4))
+  (segment (start 106.606427 105.087667) (end 107.737797 105.087667) (width 0.2032) (layer Back) (net 4))
+  (segment (start 96.197667 105.087667) (end 106.606427 105.087667) (width 0.2032) (layer Back) (net 4))
+  (segment (start 90.879499 97.037961) (end 90.879499 99.769499) (width 0.2032) (layer Back) (net 4))
+  (segment (start 90.879499 99.769499) (end 96.197667 105.087667) (width 0.2032) (layer Back) (net 4))
   (segment (start 36.020673 50.813958) (end 35.020674 51.813957) (width 0.2032) (layer Front) (net 5))
   (segment (start 40.64 46.194631) (end 36.020673 50.813958) (width 0.2032) (layer Front) (net 5))
   (segment (start 38.146341 34.087417) (end 40.64 36.581076) (width 0.2032) (layer Front) (net 5))
@@ -6638,19 +6974,19 @@
   (segment (start 34.29 81.746375) (end 29.769338 86.267037) (width 0.2032) (layer Front) (net 5))
   (segment (start 31.895006 69.540497) (end 34.29 71.935491) (width 0.2032) (layer Front) (net 5))
   (segment (start 34.29 71.935491) (end 34.29 81.746375) (width 0.2032) (layer Front) (net 5))
-  (segment (start 36.434887 51.813957) (end 35.020674 51.813957) (width 0.2032) (layer Back) (net 5))
   (segment (start 126.38 46.73) (end 117.788844 55.321156) (width 0.2032) (layer Back) (net 5))
-  (segment (start 55.748649 43.18) (end 49.53 43.18) (width 0.2032) (layer Back) (net 5))
-  (segment (start 49.53 43.18) (end 40.896043 51.813957) (width 0.2032) (layer Back) (net 5))
-  (segment (start 105.105038 52.365259) (end 105.058666 52.365259) (width 0.2032) (layer Back) (net 5))
-  (segment (start 117.788844 55.321156) (end 108.060935 55.321156) (width 0.2032) (layer Back) (net 5))
-  (segment (start 40.896043 51.813957) (end 36.434887 51.813957) (width 0.2032) (layer Back) (net 5))
-  (segment (start 84.198764 39.725578) (end 59.203071 39.725578) (width 0.2032) (layer Back) (net 5))
-  (segment (start 108.060935 55.321156) (end 105.105038 52.365259) (width 0.2032) (layer Back) (net 5))
-  (segment (start 105.058666 52.365259) (end 100.851775 48.158367) (width 0.2032) (layer Back) (net 5))
-  (segment (start 100.851775 48.158367) (end 92.631552 48.158367) (width 0.2032) (layer Back) (net 5))
-  (segment (start 92.631552 48.158367) (end 84.198764 39.725578) (width 0.2032) (layer Back) (net 5))
-  (segment (start 59.203071 39.725578) (end 55.748649 43.18) (width 0.2032) (layer Back) (net 5))
+  (segment (start 88.798368 48.158368) (end 96.52 48.158368) (width 0.2032) (layer Back) (net 5))
+  (segment (start 40.896043 51.813957) (end 49.53 43.18) (width 0.2032) (layer Back) (net 5))
+  (segment (start 35.020674 51.813957) (end 40.896043 51.813957) (width 0.2032) (layer Back) (net 5))
+  (segment (start 49.53 43.18) (end 55.748649 43.18) (width 0.2032) (layer Back) (net 5))
+  (segment (start 55.748649 43.18) (end 58.288649 40.64) (width 0.2032) (layer Back) (net 5))
+  (segment (start 58.288649 40.64) (end 81.28 40.64) (width 0.2032) (layer Back) (net 5))
+  (segment (start 81.28 40.64) (end 88.798368 48.158368) (width 0.2032) (layer Back) (net 5))
+  (segment (start 108.508843 55.321157) (end 108.508844 55.321156) (width 0.2032) (layer Back) (net 5))
+  (segment (start 103.682789 55.321157) (end 108.508843 55.321157) (width 0.2032) (layer Back) (net 5))
+  (segment (start 96.52 48.158368) (end 103.682789 55.321157) (width 0.2032) (layer Back) (net 5))
+  (segment (start 117.788844 55.321156) (end 108.508844 55.321156) (width 0.2032) (layer Back) (net 5))
+  (segment (start 108.508844 55.321156) (end 108.060935 55.321156) (width 0.2032) (layer Back) (net 5))
   (segment (start 52.358027 61.818087) (end 51.358028 62.818086) (width 0.2032) (layer Front) (net 6))
   (segment (start 55.88 58.296114) (end 52.358027 61.818087) (width 0.2032) (layer Front) (net 6))
   (segment (start 55.88 46.487852) (end 55.88 58.296114) (width 0.2032) (layer Front) (net 6))
@@ -6664,16 +7000,13 @@
   (segment (start 59.69 39.885242) (end 55.483694 44.091548) (width 0.2032) (layer Front) (net 6))
   (segment (start 57.845007 27.365007) (end 59.69 29.21) (width 0.2032) (layer Front) (net 6))
   (segment (start 59.69 29.21) (end 59.69 39.885242) (width 0.2032) (layer Front) (net 6))
-  (segment (start 55.483694 44.091548) (end 54.483695 45.091547) (width 0.2032) (layer Back) (net 6))
-  (segment (start 59.392454 40.182789) (end 55.483694 44.091548) (width 0.2032) (layer Back) (net 6))
-  (segment (start 84.009382 40.182789) (end 59.392454 40.182789) (width 0.2032) (layer Back) (net 6))
-  (segment (start 100.662393 48.615578) (end 92.442169 48.615577) (width 0.2032) (layer Back) (net 6))
-  (segment (start 104.869284 52.82247) (end 100.662393 48.615578) (width 0.2032) (layer Back) (net 6))
-  (segment (start 104.915656 52.82247) (end 104.869284 52.82247) (width 0.2032) (layer Back) (net 6))
-  (segment (start 107.871553 55.778367) (end 104.915656 52.82247) (width 0.2032) (layer Back) (net 6))
-  (segment (start 119.871633 55.778367) (end 107.871553 55.778367) (width 0.2032) (layer Back) (net 6))
-  (segment (start 126.38 49.27) (end 119.871633 55.778367) (width 0.2032) (layer Back) (net 6))
-  (segment (start 92.442169 48.615577) (end 84.009382 40.182789) (width 0.2032) (layer Back) (net 6))
+  (segment (start 58.478031 41.097211) (end 81.090619 41.097211) (width 0.2032) (layer Back) (net 6))
+  (segment (start 119.871633 55.778367) (end 126.38 49.27) (width 0.2032) (layer Back) (net 6))
+  (segment (start 54.483695 45.091547) (end 58.478031 41.097211) (width 0.2032) (layer Back) (net 6))
+  (segment (start 81.090619 41.097211) (end 88.608986 48.615578) (width 0.2032) (layer Back) (net 6))
+  (segment (start 96.252171 48.615579) (end 103.414959 55.778367) (width 0.2032) (layer Back) (net 6))
+  (segment (start 88.608986 48.615578) (end 96.252171 48.615579) (width 0.2032) (layer Back) (net 6))
+  (segment (start 103.414959 55.778367) (end 119.871633 55.778367) (width 0.2032) (layer Back) (net 6))
   (segment (start 74.078474 42.293176) (end 73.078475 43.293175) (width 0.2032) (layer Front) (net 7))
   (segment (start 78.74 37.63165) (end 74.078474 42.293176) (width 0.2032) (layer Front) (net 7))
   (segment (start 76.204143 25.566636) (end 78.74 28.102493) (width 0.2032) (layer Front) (net 7))
@@ -6686,16 +7019,15 @@
   (segment (start 72.39 73.183395) (end 67.82714 77.746255) (width 0.2032) (layer Front) (net 7))
   (segment (start 69.952808 61.019715) (end 72.39 63.456907) (width 0.2032) (layer Front) (net 7))
   (segment (start 72.39 63.456907) (end 72.39 73.183395) (width 0.2032) (layer Front) (net 7))
-  (segment (start 107.682171 56.235578) (end 104.726274 53.279681) (width 0.2032) (layer Back) (net 7))
-  (segment (start 121.954422 56.235578) (end 107.682171 56.235578) (width 0.2032) (layer Back) (net 7))
-  (segment (start 126.38 51.81) (end 121.954422 56.235578) (width 0.2032) (layer Back) (net 7))
-  (segment (start 104.679902 53.279681) (end 100.473011 49.072789) (width 0.2032) (layer Back) (net 7))
-  (segment (start 100.473011 49.072789) (end 92.252789 49.072789) (width 0.2032) (layer Back) (net 7))
-  (segment (start 92.252789 49.072789) (end 83.82 40.64) (width 0.2032) (layer Back) (net 7))
-  (segment (start 83.82 40.64) (end 77.145863 40.64) (width 0.2032) (layer Back) (net 7))
-  (segment (start 77.145863 40.64) (end 74.492688 43.293175) (width 0.2032) (layer Back) (net 7))
-  (segment (start 74.492688 43.293175) (end 73.078475 43.293175) (width 0.2032) (layer Back) (net 7))
-  (segment (start 104.726274 53.279681) (end 104.679902 53.279681) (width 0.2032) (layer Back) (net 7))
+  (segment (start 121.954422 56.235578) (end 126.38 51.81) (width 0.2032) (layer Back) (net 7))
+  (segment (start 108.305578 56.235578) (end 121.954422 56.235578) (width 0.2032) (layer Back) (net 7))
+  (segment (start 107.682171 56.235578) (end 108.305578 56.235578) (width 0.2032) (layer Back) (net 7))
+  (segment (start 103.225578 56.235578) (end 108.305578 56.235578) (width 0.2032) (layer Back) (net 7))
+  (segment (start 96.062789 49.072789) (end 103.225578 56.235578) (width 0.2032) (layer Back) (net 7))
+  (segment (start 81.256816 41.91) (end 88.419605 49.072789) (width 0.2032) (layer Back) (net 7))
+  (segment (start 74.46165 41.91) (end 81.256816 41.91) (width 0.2032) (layer Back) (net 7))
+  (segment (start 88.419605 49.072789) (end 96.062789 49.072789) (width 0.2032) (layer Back) (net 7))
+  (segment (start 73.078475 43.293175) (end 74.46165 41.91) (width 0.2032) (layer Back) (net 7))
   (segment (start 84.511791 86.780769) (end 83.511792 87.780768) (width 0.2032) (layer Front) (net 8))
   (segment (start 88.9 82.39256) (end 84.511791 86.780769) (width 0.2032) (layer Front) (net 8))
   (segment (start 86.637459 70.054228) (end 88.9 72.316769) (width 0.2032) (layer Front) (net 8))
@@ -6708,13 +7040,11 @@
   (segment (start 95.25 46.840815) (end 90.763125 51.32769) (width 0.2032) (layer Front) (net 8))
   (segment (start 92.888793 34.601149) (end 95.25 36.962356) (width 0.2032) (layer Front) (net 8))
   (segment (start 95.25 36.962356) (end 95.25 46.840815) (width 0.2032) (layer Front) (net 8))
-  (segment (start 103.081317 52.327689) (end 91.177339 52.327689) (width 0.2032) (layer Back) (net 8))
-  (segment (start 91.177339 52.327689) (end 89.763126 52.327689) (width 0.2032) (layer Back) (net 8))
-  (segment (start 126.38 54.35) (end 124.037211 56.692789) (width 0.2032) (layer Back) (net 8))
-  (segment (start 104.49052 53.736892) (end 103.081317 52.327689) (width 0.2032) (layer Back) (net 8))
-  (segment (start 104.536892 53.736892) (end 104.49052 53.736892) (width 0.2032) (layer Back) (net 8))
-  (segment (start 107.492789 56.692789) (end 104.536892 53.736892) (width 0.2032) (layer Back) (net 8))
-  (segment (start 124.037211 56.692789) (end 107.492789 56.692789) (width 0.2032) (layer Back) (net 8))
+  (segment (start 103.036196 56.692789) (end 124.037211 56.692789) (width 0.2032) (layer Back) (net 8))
+  (segment (start 124.037211 56.692789) (end 125.503701 55.226299) (width 0.2032) (layer Back) (net 8))
+  (segment (start 98.671097 52.327689) (end 103.036196 56.692789) (width 0.2032) (layer Back) (net 8))
+  (segment (start 125.503701 55.226299) (end 126.38 54.35) (width 0.2032) (layer Back) (net 8))
+  (segment (start 89.763126 52.327689) (end 98.671097 52.327689) (width 0.2032) (layer Back) (net 8))
   (segment (start 107.621424 59.377396) (end 106.621425 60.377395) (width 0.2032) (layer Front) (net 9))
   (segment (start 111.76 55.23882) (end 107.621424 59.377396) (width 0.2032) (layer Front) (net 9))
   (segment (start 109.960855 42.650855) (end 111.76 44.45) (width 0.2032) (layer Front) (net 9))
@@ -6731,17 +7061,17 @@
   (segment (start 109.84882 57.15) (end 106.621425 60.377395) (width 0.2032) (layer Back) (net 9))
   (segment (start 126.12 57.15) (end 109.84882 57.15) (width 0.2032) (layer Back) (net 9))
   (segment (start 126.38 56.89) (end 126.12 57.15) (width 0.2032) (layer Back) (net 9))
-  (segment (start 154.483419 107.997011) (end 155.483418 108.99701) (width 0.2032) (layer Front) (net 10))
-  (segment (start 115.469757 107.95) (end 119.38 107.95) (width 0.2032) (layer Front) (net 10))
-  (segment (start 111.26174 103.741983) (end 115.469757 107.95) (width 0.2032) (layer Front) (net 10))
-  (segment (start 119.38 107.95) (end 121.92 110.49) (width 0.2032) (layer Front) (net 10))
-  (segment (start 121.92 110.49) (end 148.59 110.49) (width 0.2032) (layer Front) (net 10))
-  (segment (start 148.59 110.49) (end 151.082989 107.997011) (width 0.2032) (layer Front) (net 10))
-  (segment (start 151.082989 107.997011) (end 154.483419 107.997011) (width 0.2032) (layer Front) (net 10))
   (segment (start 125.73 62.62) (end 126.38 61.97) (width 0.2032) (layer Back) (net 10))
   (segment (start 125.73 82.55) (end 125.73 62.62) (width 0.2032) (layer Back) (net 10))
   (segment (start 111.26174 103.741983) (end 111.26174 97.01826) (width 0.2032) (layer Back) (net 10))
   (segment (start 111.26174 97.01826) (end 125.73 82.55) (width 0.2032) (layer Back) (net 10))
+  (segment (start 154.483419 107.997011) (end 155.483418 108.99701) (width 0.2032) (layer Front) (net 10))
+  (segment (start 115.469757 107.95) (end 120.65 107.95) (width 0.2032) (layer Front) (net 10))
+  (segment (start 111.26174 103.741983) (end 115.469757 107.95) (width 0.2032) (layer Front) (net 10))
+  (segment (start 120.65 107.95) (end 123.19 110.49) (width 0.2032) (layer Front) (net 10))
+  (segment (start 123.19 110.49) (end 148.59 110.49) (width 0.2032) (layer Front) (net 10))
+  (segment (start 148.59 110.49) (end 151.082989 107.997011) (width 0.2032) (layer Front) (net 10))
+  (segment (start 151.082989 107.997011) (end 154.483419 107.997011) (width 0.2032) (layer Front) (net 10))
   (segment (start 165.612291 60.543578) (end 166.61229 61.543577) (width 0.2032) (layer Front) (net 11))
   (segment (start 162.486623 57.41791) (end 165.612291 60.543578) (width 0.2032) (layer Front) (net 11))
   (segment (start 163.486622 43.817038) (end 162.486623 44.817037) (width 0.2032) (layer Front) (net 11))

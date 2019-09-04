@@ -14,7 +14,7 @@
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
   `(module Keebio-Parts:MX-Alps-Choc-1U-NoLED (layer Front) (tedit 4FD81CDD) (tstamp 543EF801)
-     (at ,x ,y ,rotation)
+     (at ,x ,y ,(+ rotation 180))
      (path /543DB910) ; TODO: this is not documented; no idea what it does
      (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS)
               (effects (font (size 1.524 1.778) (thickness 0.254))))
@@ -31,12 +31,13 @@
      (fp_line (start 7 -7) (end 7 -5) (layer Dwgs.User) (width 0.15))
      (fp_line (start 5 -7) (end 7 -7) (layer Dwgs.User) (width 0.15))
 
-     (pad "" np_thru_hole circle (at -5.5 0 ,(+ rotation 180)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 0 0 ,(+ rotation 180)) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 5.5 0 ,(+ rotation 180)) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 5.22 -4.2 180) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 0 0 180) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at -5.5 0 180) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 5.5 0 180) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
 
-     (pad 1 thru_hole circle (at 5 -3.8 ,rotation) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)
-     (pad 2 thru_hole circle (at 0 -5.9 ,rotation) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)))
+     (pad 1 thru_hole circle (at 0 5.9 180) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)
+     (pad 2 thru_hole circle (at -5 3.8 41.9) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)))
 
 (define (diode-module x y rotation label net-pos net-neg)
   `(module DIODE (layer Front) (tedit 4E0F7A99) (tstamp 543EF854)

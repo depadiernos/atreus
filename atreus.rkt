@@ -31,13 +31,17 @@
      (fp_line (start 7 -7) (end 7 -5) (layer Dwgs.User) (width 0.15))
      (fp_line (start 5 -7) (end 7 -7) (layer Dwgs.User) (width 0.15))
 
-     (pad "" np_thru_hole circle (at 5.22 -4.2 180) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
-     (pad "" np_thru_hole circle (at 0 0 180) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
+     (pad 1 thru_hole circle (at 0 5.9 180) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)
+     (pad 2 thru_hole circle (at 5 3.8 41.9) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)
+     (pad 2 thru_hole circle (at -5 3.8 41.9) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)
+
      (pad "" np_thru_hole circle (at -5.5 0 180) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 0 0 180) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at 5.22 -4.2 180) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
+     (pad "" np_thru_hole circle (at -5.22 -4.2 180) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
      (pad "" np_thru_hole circle (at 5.5 0 180) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
 
-     (pad 1 thru_hole circle (at 0 5.9 180) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)
-     (pad 2 thru_hole circle (at -5 3.8 41.9) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)))
+     ))
 
 (define (diode-module x y rotation label net-pos net-neg)
   `(module DIODE (layer Front) (tedit 4E0F7A99) (tstamp 543EF854)
@@ -62,7 +66,7 @@
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
-     (at 134 48 270)
+     (at 134 55 270)
      (path /543EEB02)
      (fp_text reference Promicro (at 10 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
@@ -189,8 +193,8 @@
     (list (switch row col) (diode row col))))
 
 (define edge-cuts
-  (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22]  [251 100] [161 112] [107 112] [17 100]))
-             (e '([84 22] [127 30] [185 22] [141 30] [237 22] [251 100] [161 112] [107 112] [17  100] [31 22]))]
+  (for/list [(s '([31 22] [77  22] [121 38] [148 38] [192 22] [237 22]  [251 100] [161 112] [107 112] [17 100]))
+             (e '([77 22] [121 38] [148 38] [192 22] [237 22] [251 100] [161 112] [107 112] [17  100] [31 22]))]
     `(gr_line (start ,@s) (end ,@e) (angle 90) (layer Edge.Cuts) (width 0.3))))
 
 (define board

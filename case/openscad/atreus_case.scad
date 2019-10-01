@@ -318,7 +318,7 @@ module quartered_spacer()
 /* Create all four layers. */
 //translate([300, 0]) top_plate();
 translate([0, 0]) switch_plate();
-//translate([0, 150]) bottom_plate();
+translate([0, 120]) bottom_plate();
 /*
 translate([300, 150]) {
   if (quarter_spacer == true) {

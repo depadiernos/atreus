@@ -17,10 +17,10 @@
     (at ,x ,y ,rotation)
     (path /543DB910) ; TODO: this is not documented; no idea what it does
     (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS) (effects (font (size 1.524 1.778) (thickness 0.254))))
-    (fp_line (start -6.35 -6.35) (end 6.35 -6.35) (layer F.SilkS) (width 0.381))
-    (fp_line (start 6.35 -6.35) (end 6.35 6.35) (layer F.SilkS) (width 0.381))
-    (fp_line (start 6.35 6.35) (end -6.35 6.35) (layer F.SilkS) (width 0.381))
-    (fp_line (start -6.35 6.35) (end -6.35 -6.35) (layer F.SilkS) (width 0.381))
+    (fp_line (start -7 -7) (end  7 -7) (layer F.SilkS) (width 0.381))
+    (fp_line (start  7 -7) (end  7  7) (layer F.SilkS) (width 0.381))
+    (fp_line (start  7  7) (end -7  7) (layer F.SilkS) (width 0.381))
+    (fp_line (start -7  7) (end -7 -7) (layer F.SilkS) (width 0.381))
     (pad 0 np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878)) ; switch hole, no copper
     (pad 0 np_thru_hole circle (at -5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
     (pad 0 np_thru_hole circle (at 5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper

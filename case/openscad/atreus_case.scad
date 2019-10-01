@@ -149,7 +149,7 @@ module rotate_half() {
 module add_hand_separation() {
   /* Shift everything right to get desired hand separation. */
   for (i=[0:$children-1]) {
-    translate([0.5*hand_separation, /* we get back the full separation
+    translate([0.5*hand_separation + 0.2, /* we get back the full separation
                                        because of mirroring */
                0]) children(i);
   }

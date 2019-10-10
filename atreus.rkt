@@ -3,13 +3,13 @@
 (define cols 12)
 (define rows 4)
 
-(define x-offset 20)
+(define x-offset 19)
 (define y-offset 20)
 
 (define spacing 19)
 (define angle 10)
 
-(define column-offsets '(8 5 0 6 11 65 65 11 6 0 5 8))
+(define column-offsets '(8 5 0 6 11 48 48 11 6 0 5 8))
 
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
@@ -98,7 +98,7 @@
     (net 13 N-col-8)
     (net 14 N-col-9)
     (net 15 N-col-10)
-    ,@(for/list ([s (in-range 42)])
+    ,@(for/list ([s (in-range 48)])
         (list 'net (+ 16 s) (string->symbol (format "N-diode-~s" s))))))
 
 (define (net-class nets)
@@ -120,15 +120,15 @@
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′)))]
+         [x′ (+ (if left? x-offset 6) (* hypotenuse (cos Θ′)))]
          [y′ (+ (if left? y-offset (+ y-offset 42.885)) (* hypotenuse (sin Θ′)))]
          [label (format "SW~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
          ;; so we re-use the nets we skipped with the missing col 5/6 diodes
-         [diode (cond [(> diode 44) (- diode 20)]
-                      [(> diode 41) (- diode 21)]
-                      [true diode])]
+        ;[diode (cond [(> diode 44) (- diode 20)]
+        ;             [(> diode 41) (- diode 21)]
+        ;             [true diode])]
          [net-col (if left? col (- col 1))]
          [diode-net `(net ,(+ 16 diode)
                           ,(string->symbol (format "N-diode-~s" diode)))]
@@ -150,7 +150,7 @@
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′))
+         [x′ (+ (if left? x-offset 6) (* hypotenuse (cos Θ′))
                 (if left? 9 -9))]
          [y′ (+ (if left? y-offset (+ y-offset 42.885))
                 (* hypotenuse (sin Θ′)))]
@@ -158,11 +158,13 @@
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
          ;; so we re-use the nets we skipped with the missing col 5/6 diodes
-         [diode (cond [(> diode 44) (- diode 20)]
-                      [(> diode 41) (- diode 21)]
-                      [true diode])]
-         [net-row (cond [(= col 5) 2]
-                        [(= col 6) 3]
+        ;[diode (cond [(> diode 44) (- diode 20)]
+        ;             [(> diode 41) (- diode 21)]
+        ;             [true diode])]
+         [net-row (cond [(and (= row 0) (= col 5)) 0]
+                        [(and (= row 0) (= col 6)) 1]
+                        [(and (= row 1) (= col 5)) 2]
+                        [(and (= row 1) (= col 6)) 3]
                         [true row])])
     (diode-module x′ y′ rotation label
                   `(net ,(+ 16 diode)
@@ -174,7 +176,7 @@
   (for/list ([col (in-range cols)]
              #:when true
              [row (if (or (= 5 col) (= 6 col))
-                      '(0) (in-range rows))])
+                      '(0 1) (in-range rows))])
     (list (switch row col) (diode row col))))
 
 (define edge-cuts

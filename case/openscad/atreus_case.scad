@@ -209,13 +209,16 @@ module right_screw_holes(hole_radius) {
 
   rotate_half() {
     add_hand_separation() {
-      screw_hole(hole_radius, washer_radius,
+      screw_hole(hole_radius,
+                 washer_radius,
                  [row_spacing, 0],
                  [-nudge, -nudge]);
-      screw_hole(hole_radius, washer_radius,
+      screw_hole(hole_radius,
+                 washer_radius,
                  [(n_cols+n_thumb_keys)*row_spacing, staggering_offsets[n_cols-1]],
                  [nudge, -nudge]);
-      screw_hole(hole_radius, washer_radius,
+      screw_hole(hole_radius,
+                 washer_radius,
                  back_right,
                  [nudge, nudge]);
     }
@@ -238,7 +241,9 @@ module right_screw_holes(hole_radius) {
 module screw_holes(hole_radius) {
   /* Create all the screw holes. */
   right_screw_holes(hole_radius);
-  mirror ([1,0,0]) { right_screw_holes(hole_radius); }
+  mirror ([1,0,0]) {
+    right_screw_holes(hole_radius);
+  }
 }
 
 module left_half(switch_holes=true, key_size=key_hole_size) {
@@ -248,10 +253,16 @@ module left_half(switch_holes=true, key_size=key_hole_size) {
 module bottom_plate() {
   /* bottom layer of the case */
   difference() {
-    hull() { screw_holes(washer_radius); }
+    hull() {
+      screw_holes(washer_radius);
+    }
     screw_holes(screw_hole_radius);
-    translate([-20, 98]){circle(1.5);}
-    translate([20, 98]){circle(1.5);}
+    translate([-20, 98]){
+      circle(1.5);
+    }
+    translate([20, 98]){
+      circle(1.5);
+    }
   }
 }
 
@@ -270,8 +281,9 @@ module switch_plate() {
     bottom_plate();
     right_half();
     left_half();
-    translate([-10, 49]){square([20,50], 10);}
-    translate([-5, 98]){square([10, 20]);}
+    translate([-10, 49]) {
+      square([20,60], 10);
+    }
   }
 }
 

@@ -23,7 +23,7 @@ screw_hole_radius = 1.5;
 /* Each screw hole is a hole in a "washer". How big these "washers"
    should be depends on the material used: this parameter and the
    `switch_hole_size` determine the spacer wall thickness. */
-washer_radius     = 4 * screw_hole_radius;
+washer_radius     = 2 * screw_hole_radius;
 
 /* This constant allows tweaking the location of the screw holes near
    the USB cable. Only useful with small `angle` values. Try the value
@@ -31,7 +31,7 @@ washer_radius     = 4 * screw_hole_radius;
 back_screw_hole_offset = 0;
 
 /* Distance between halves. */
-hand_separation        = 0;
+hand_separation        = 2;
 
 /* The approximate size of switch holes. Used to determine how
    thick walls can be, i.e. how much room around each switch hole to
@@ -111,13 +111,8 @@ module regular_key(position, size) {
 }
 
 module thumb_key(position, size) {
-  /* Create a hole for a 1x1.5 unit thumb key. */
   translate(position) {
-    scale([1, 1.5]) {
-      translate(-position) {
-        regular_key(position, size);
-      }
-    }
+    regular_key(position, size);
   }
 }
 
@@ -161,12 +156,14 @@ module right_half (switch_holes=true, key_size=key_hole_size) {
      spacer(). */
   x_offset = 0.5 * row_spacing;
   y_offset = 0.5 * column_spacing;
-  thumb_key_offset = y_offset + 3;
+  thumb_key_offset = y_offset + 1;
+  second_thumb_offset = y_offset + 20;
   rotate_half() {
     add_hand_separation() {
       for (j=[0:(n_thumb_keys-1)]) {
         if (switch_holes == true) {
           switch_hole([x_offset + j*row_spacing, thumb_key_offset]);
+          switch_hole([x_offset + j*row_spacing, second_thumb_offset]);
         } else {
           thumb_key([x_offset + j*row_spacing, thumb_key_offset], key_size);
         }
@@ -205,7 +202,7 @@ module right_screw_holes(hole_radius) {
   /* and after */
   tmp = rz_fun(back_right, angle, [0, 2.25*column_spacing]);
 
-  nudge = 0.75;
+  nudge = 0;
 
   rotate_half() {
     add_hand_separation() {

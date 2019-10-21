@@ -1,0 +1,13 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"C1,C2";"C_0805";2;"22pf";;;
+2;"Y1";"Crystal_SMD_3225-4pin_3.2x2.5mm";1;"Crystal_GND24_Small";;;
+3;"U1";"ATMEGA32U4-AU";1;"ATmega32U4-AU";;;
+4;"C3";"C_0805";1;"1uf";;;
+5;"C4,C5,C6";"C_0805";3;"0.1uf";;;
+6;"C7";"C_0805";1;"10uf";;;
+7;"R1,R4";"R_0805";2;"10k";;;
+8;"REF**";"Molex-0548190589";1;"";;;
+9;"R2,R3";"R_0805";2;"22";;;
+10;"500mA";"Fuse_SMD1206_Reflow";1;"F1";;;
+11;"SW0:0,SW0:1,SW0:2,SW0:3,SW1:0,SW1:1,SW1:2,SW1:3,SW2:0,SW2:1,SW2:2,SW2:3,SW3:0,SW3:1,SW3:2,SW3:3,SW4:0,SW4:1,SW4:2,SW4:3,SW5:0,SW5:1,SW6:0,SW6:1,SW7:0,SW7:1,SW7:2,SW7:3,SW8:0,SW8:1,SW8:2,SW8:3,SW9:0,SW9:1,SW9:2,SW9:3,SW10:0,SW10:1,SW10:2,SW10:3,SW11:0,SW11:1,SW11:2,SW11:3";"MX-Alps-Choc-1U-NoLED";44;"";;;
+12;"D0:0,D0:1,D0:2,D0:3,D1:0,D1:1,D1:2,D1:3,D2:0,D2:1,D2:2,D2:3,D3:0,D3:1,D3:2,D3:3,D4:0,D4:1,D4:2,D4:3,D5:0,D5:1,D6:0,D6:1,D7:0,D7:1,D7:2,D7:3,D8:0,D8:1,D8:2,D8:3,D9:0,D9:1,D9:2,D9:3,D10:0,D10:1,D10:2,D10:3,D11:0,D11:1,D11:2,D11:3";"DIODE";44;"";;;

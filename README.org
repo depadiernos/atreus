@@ -84,8 +84,7 @@ readily-available choice, but nearly any signal diode would work.
 
 *** Microcontroller
 
-The circuit board design uses a [[http://www.pololu.com/product/3101][Pololu A-star micro]]. Hand-wired boards
-can also use a [[http://arduino.cc/en/Main/ArduinoBoardMicro][Arduino Pro Micro]].
+The circuit board design uses a [[http://arduino.cc/en/Main/ArduinoBoardMicro][Arduino Pro Micro]].
 
 Be sure to get a microcontroller without headers so it will fit in
 between the bottom layer and the plate. USB micro is preferred over

@@ -1,6 +1,6 @@
 #lang racket
 
-(define cols 12)
+(define cols 14)
 (define rows 4)
 
 (define x-offset 20)
@@ -9,7 +9,7 @@
 (define spacing 19)
 (define angle 10)
 
-(define column-offsets '(8 5 0 6 11 65 65 11 6 0 5 8))
+(define column-offsets '(8 8 5 0 6 11 65 65 11 6 0 5 8 8))
 
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
@@ -49,7 +49,7 @@
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
-     (at 134 48 270)
+     (at 153.5 48 270)
      (path /543EEB02)
      (fp_text reference Promicro (at 10 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
@@ -62,10 +62,10 @@
      (pad C6  thru_hole circle (at 3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 13 N-col-8))
      (pad D4  thru_hole circle (at 1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 14 N-col-9))
      (pad D0  thru_hole circle (at -1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 15 N-col-10))
-     (pad D1  thru_hole circle (at -3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
+     (pad D1  thru_hole circle (at -3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 16 N-col-11))
      (pad GND thru_hole circle (at -6.35 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
      (pad GND thru_hole circle (at -8.89 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad RX1 thru_hole circle (at -11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
+     (pad RX1 thru_hole circle (at -11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 17 N-col-12))
      (pad TX0 thru_hole rect (at -13.97 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
 
      (pad B6  thru_hole circle (at 13.97 7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 10 N-col-5))
@@ -98,8 +98,10 @@
     (net 13 N-col-8)
     (net 14 N-col-9)
     (net 15 N-col-10)
-    ,@(for/list ([s (in-range 42)])
-        (list 'net (+ 16 s) (string->symbol (format "N-diode-~s" s))))))
+    (net 16 N-col-11)
+    (net 17 N-col-12)
+    ,@(for/list ([s (in-range 56)])
+        (list 'net (+ 18 s) (string->symbol (format "N-diode-~s" s))))))
 
 (define (net-class nets)
   (append '(net_class Default "This is the default net class."
@@ -113,7 +115,7 @@
             (list 'add_net (last n)))))
 
 (define (switch row col)
-  (let* ([left? (< col 6)]
+  (let* ([left? (< col 7)]
          [rotation (if left? -10 10)]
          [x (* (+ 1 col) spacing)]
          [y (+ (list-ref column-offsets col) (* spacing row))]
@@ -121,29 +123,27 @@
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
          [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′)))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885)) (* hypotenuse (sin Θ′)))]
+         [y′ (+ (if left? y-offset (+ y-offset 49.485))
+                (* hypotenuse (sin Θ′)))]
          [label (format "SW~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
          ;; so we re-use the nets we skipped with the missing col 5/6 diodes
-         [diode (cond [(> diode 44) (- diode 20)]
-                      [(> diode 41) (- diode 21)]
-                      [true diode])]
          [net-col (if left? col (- col 1))]
-         [diode-net `(net ,(+ 16 diode)
+         [diode-net `(net ,(+ 18 diode)
                           ,(string->symbol (format "N-diode-~s" diode)))]
          [column-net `(net ,(+ net-col 5)
                            ,(string->symbol (format "N-col-~s" net-col)))]
          ;; rotate middle keys additional 90° after calculating position
-         [rotation (cond [(= 5 col) 80]
-                         [(= 6 col) 280]
+         [rotation (cond [(= 6 col) 80]
+                         [(= 7 col) 280]
                          [true rotation])])
     (switch-module x′ y′ rotation label
                    (if left? diode-net column-net)
                    (if left? column-net diode-net))))
 
 (define (diode row col)
-  (let* ([left? (< col 6)]
+  (let* ([left? (< col 7)]
          [rotation (if left? -10 10)]
          [x (* (+ 1 col) spacing)]
          [y (+ (list-ref column-offsets col) (* spacing row))]
@@ -152,20 +152,17 @@
          [Θ′ (- Θ (degrees->radians rotation))]
          [x′ (+ (if left? x-offset 5) (* hypotenuse (cos Θ′))
                 (if left? 9 -9))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885))
+         [y′ (+ (if left? y-offset (+ y-offset 49.485))
                 (* hypotenuse (sin Θ′)))]
          [label (format "D~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
          ;; so we re-use the nets we skipped with the missing col 5/6 diodes
-         [diode (cond [(> diode 44) (- diode 20)]
-                      [(> diode 41) (- diode 21)]
-                      [true diode])]
-         [net-row (cond [(= col 5) 2]
-                        [(= col 6) 3]
+         [net-row (cond [(= col 6) 2]
+                        [(= col 7) 3]
                         [true row])])
     (diode-module x′ y′ rotation label
-                  `(net ,(+ 16 diode)
+                  `(net ,(+ 18 diode)
                         ,(string->symbol (format "N-diode-~s" diode)))
                   `(net ,(+ net-row 1)
                         ,(string->symbol (format "N-row-~s" net-row))))))
@@ -173,13 +170,13 @@
 (define switches+diodes
   (for/list ([col (in-range cols)]
              #:when true
-             [row (if (or (= 5 col) (= 6 col))
+             [row (if (or (= 6 col) (= 7 col))
                       '(0) (in-range rows))])
     (list (switch row col) (diode row col))))
 
 (define edge-cuts
-  (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22] [250 95]  [161 112] [107 112] [18 95]))
-             (e '([84 22] [127 30] [185 22] [141 30] [237 22] [250 95] [161 112] [107 112] [18 95]   [31 22]))]
+  (for/list [(s '([31 22] [96  25] [165 30] [143 30] [209 25] [275 22] [288  95] [179 115] [127 115] [18 95]))
+             (e '([96 25] [143 30] [209 25] [165 30] [275 22] [288 95] [179 115] [127 115] [18   95] [31 22]))]
     `(gr_line (start ,@s) (end ,@e) (angle 90) (layer Edge.Cuts) (width 0.3))))
 
 (define board

@@ -297,10 +297,10 @@ module spacer() {
           right_half(switch_holes=false, key_size=switch_hole_size + 3);
           left_half(switch_holes=false, key_size=switch_hole_size + 3);
         }
-    /* add the USB cable hole: */
-    translate([-0.5*cable_hole_width, 2*column_spacing]) {
-      square([cable_hole_width, (2*n_rows) * column_spacing]);
-    }
+        /* add the USB cable hole: */
+        translate([-0.5*cable_hole_width, 2*column_spacing]) {
+          square([cable_hole_width, (2*n_rows) * column_spacing]);
+        }
       }
       screw_holes(washer_radius);
     }
@@ -318,8 +318,7 @@ module spacer_quadrant(spacer_quadrant_number) {
   }
 }
 
-module quartered_spacer()
-{
+module quartered_spacer() {
   /* Assemble all four quarters of a spacer. */
   spacer_quadrant(0);
   spacer_quadrant(1);

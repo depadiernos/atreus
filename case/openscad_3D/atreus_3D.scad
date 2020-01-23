@@ -2,7 +2,7 @@
 /* All distances are in mm. */
 
 /* set output quality */
-$fn = 50;
+$fn = 10;
 
 /* Distance between key centers. */
 column_spacing   = 19;
@@ -40,7 +40,7 @@ switch_hole_size = 14;
 
 /* Sets whether the case should use notched holes. As far as I can
    tell these notches are not all that useful... */
-use_notched_holes = true;
+use_notched_holes = false;
 
 /* Number of rows and columns in the matrix. You need to update
    staggering_offsets if you change n_cols. */
@@ -162,7 +162,7 @@ module right_half (switch_holes=true, key_size=key_hole_size) {
      spacer(). */
   x_offset = 0.5 * row_spacing;
   y_offset = 0.5 * column_spacing;
-  thumb_key_offset = y_offset + 0.5 * column_spacing;
+  thumb_key_offset = y_offset + 3;
   rotate_half() {
     add_hand_separation() {
       for (j=[0:(n_thumb_keys-1)]) {
@@ -251,6 +251,12 @@ module bottom_plate() {
   difference() {
     hull() { screw_holes(washer_radius); }
     screw_holes(screw_hole_radius);
+    translate([-20,98]) {
+      cylinder(1.5, h=50);
+    }
+    translate([20,98]) {
+      cylinder(1.5, h=50);
+    }
   }
 }
 
@@ -260,6 +266,15 @@ module top_plate() {
     bottom_plate();
     right_half(false);
     left_half(false);
+    translate([-10, 49]) {
+      cube([20,60,50], 10);
+    }
+    translate([-20,98]) {
+      cylinder(1.5, h=50);
+    }
+    translate([20,98]) {
+      cylinder(1.5, h=50);
+    }
   }
 }
 
@@ -269,6 +284,15 @@ module switch_plate() {
     bottom_plate();
     right_half();
     left_half();
+    translate([-10, 49]) {
+      cube([20,60,50], 10);
+    }
+    translate([-20,98]) {
+      cylinder(1.5, h=50);
+    }
+    translate([20,98]) {
+      cylinder(1.5, h=50);
+    }
   }
 }
 
@@ -282,14 +306,23 @@ module spacer() {
           right_half(switch_holes=false, key_size=switch_hole_size + 3);
           left_half(switch_holes=false, key_size=switch_hole_size + 3);
         }
-    /* add the USB cable hole: */
-    translate([-0.5*cable_hole_width, 2*column_spacing,0]) {
-      cube([cable_hole_width, (2*n_rows) * column_spacing,50]);
-    }
+        /* add the USB cable hole: */
+        translate([-0.5*cable_hole_width, 2*column_spacing,0]) {
+          cube([cable_hole_width, (2*n_rows) * column_spacing,50]);
+        }
       }
       screw_holes(washer_radius);
     }
     screw_holes(screw_hole_radius);
+    translate([-10, 49]) {
+      cube([20,60,50], 10);
+    }
+    translate([-20,98]) {
+      cylinder(1.5, h=50);
+    }
+    translate([20,98]) {
+      cylinder(1.5, h=50);
+    }
   }
 }
 

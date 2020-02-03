@@ -150,7 +150,7 @@ module rotate_half() {
 module add_hand_separation() {
   /* Shift everything right to get desired hand separation. */
   for (i=[0:$children-1]) {
-    translate([0.5*hand_separation, /* we get back the full separation
+    translate([0.5*hand_separation + 0.2, /* we get back the full separation
                                        because of mirroring */
                0]) children(i);
   }
@@ -252,10 +252,10 @@ module bottom_plate() {
     hull() { screw_holes(washer_radius); }
     screw_holes(screw_hole_radius);
     translate([-20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
     translate([20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
   }
 }
@@ -270,10 +270,10 @@ module top_plate() {
       cube([20,60,50], 10);
     }
     translate([-20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
     translate([20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
   }
 }
@@ -288,10 +288,10 @@ module switch_plate() {
       cube([20,60,50], 10);
     }
     translate([-20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
     translate([20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50, center=true);
     }
   }
 }
@@ -318,10 +318,10 @@ module spacer() {
       cube([20,60,50], 10);
     }
     translate([-20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50);
     }
     translate([20,98]) {
-      cylinder(1.5, h=50);
+      cylinder(r=1.5, h=50);
     }
   }
 }

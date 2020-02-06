@@ -63,6 +63,9 @@ quarter_spacer = false;
 /* Where the top/bottom split of a quartered spacer will be. */
 spacer_quartering_offset = 60;
 
+/* wrist rest thickness */
+wrist_rest_thickness = 60;
+
 module rz(angle, center=undef) {
   /* Rotate children `angle` degrees around `center`. */
   translate(center) {
@@ -198,7 +201,7 @@ module screw_hole(radius, offset_radius, position, direction) {
   }
 }
 
-module right_screw_holes(hole_radius) {
+module right_screw_holes(hole_radius, extension = 0) {
   /* coordinates of the back right screw hole before rotation... */
   back_right = [(n_cols+n_thumb_keys)*row_spacing,
                staggering_offsets[n_cols-1] + n_rows * column_spacing];
@@ -211,11 +214,11 @@ module right_screw_holes(hole_radius) {
     add_hand_separation() {
       screw_hole(hole_radius,
                  washer_radius,
-                 [row_spacing, 0],
+                 [row_spacing, 0 - extension],
                  [-nudge, -nudge]);
       screw_hole(hole_radius,
                  washer_radius,
-                 [(n_cols+n_thumb_keys)*row_spacing, staggering_offsets[n_cols-1]],
+                 [(n_cols+n_thumb_keys)*row_spacing, staggering_offsets[n_cols-1] - extension],
                  [nudge, -nudge]);
       screw_hole(hole_radius,
                  washer_radius,
@@ -238,11 +241,11 @@ module right_screw_holes(hole_radius) {
   }
 }
 
-module screw_holes(hole_radius) {
+module screw_holes(hole_radius, extension = 0) {
   /* Create all the screw holes. */
-  right_screw_holes(hole_radius);
+  right_screw_holes(hole_radius, extension);
   mirror ([1,0,0]) {
-    right_screw_holes(hole_radius);
+    right_screw_holes(hole_radius, extension);
   }
 }
 
@@ -250,19 +253,26 @@ module left_half(switch_holes=true, key_size=key_hole_size) {
   mirror ([1,0,0]) { right_half(switch_holes, key_size); }
 }
 
-module bottom_plate() {
+module bottom_plate(hol_radius = screw_hole_radius, extension = 0) {
   /* bottom layer of the case */
   difference() {
     hull() {
-      screw_holes(washer_radius);
+      screw_holes(washer_radius, extension);
     }
-    screw_holes(screw_hole_radius);
+    screw_holes(hol_radius, extension);
     translate([-20, 98]){
       circle(1.5);
     }
     translate([20, 98]){
       circle(1.5);
     }
+  }
+}
+
+module wrist_rest(extension) {
+  difference() {
+    bottom_plate(0, wrist_rest_thickness);
+    bottom_plate(0);
   }
 }
 
@@ -328,8 +338,9 @@ module quartered_spacer() {
 
 /* Create all four layers. */
 translate([280, 0]) top_plate();
-translate([0, 0]) switch_plate();
-translate([0, 120]) bottom_plate();
+translate([0, 120]) switch_plate();
+translate([0, 0]) bottom_plate();
+translate([0, -10]) wrist_rest();
 translate([280, 120]) {
   if (quarter_spacer == true) {
     quartered_spacer();

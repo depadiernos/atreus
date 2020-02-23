@@ -336,7 +336,35 @@ module quartered_spacer() {
   translate([5,-10]) spacer_quadrant(3);
 }
 
-/* Create all four layers. */
+module another_spacer() {
+  difference() {
+    bottom_plate();
+    translate([-134, 116]) {
+      polygon(
+        points=[
+          [29, -18],
+          [239, -18],
+          [252, -96],
+          [161, -113],
+          [107, -113],
+          [16, -96],
+        ]
+      );
+    }
+    translate([-134, 116]) {
+      polygon(
+        points=[
+          [124, -2],
+          [124, -39],
+          [144, -39],
+          [144, -2],
+        ]
+      );
+    }
+  }
+}
+
+/* Create all four layers */
 translate([280, 0]) top_plate();
 translate([0, 120]) switch_plate();
 translate([0, 0]) bottom_plate();
@@ -346,6 +374,6 @@ translate([280, 120]) {
     quartered_spacer();
   }
   else {
-    spacer();
+    another_spacer();
   }
 }

@@ -345,18 +345,51 @@ module quartered_spacer()
   translate([5,-10]) spacer_quadrant(3);
 }
 
-/* Create all four layers. */
+module another_spacer() {
+  difference() {
+    bottom_plate();
+    linear_extrude(height = 5) {
+      translate([-134, 116, -1]) {
+        polygon(
+          points=[
+            [29, -18],
+            [239, -18],
+            [252, -96],
+            [161, -113],
+            [107, -113],
+            [16, -96],
+          ]
+        );
+      }
+    }
+    linear_extrude(height = 5) {
+      translate([-134, 116, -1] ) {
+        polygon(
+          points=[
+            [124, -2],
+            [124, -39],
+            [144, -39],
+            [144, -2],
+          ]
+        );
+      }
+    }
+  }
+}
 
+
+/* Create all four layers. */
 translate([0,0,9]) top_plate();
 translate([0, 0, 6]) { switch_plate(); }
 translate([300, 0,0]) { bottom_plate(); }
-translate([0,0,3]) spacer();
+//translate([0,0,3]) spacer();
+translate([0,0,3]) another_spacer();
 translate([0, 0,0]) {
   if (quarter_spacer == true) {
     quartered_spacer();
   }
   else {
-    spacer();
+    //spacer();
+    another_spacer();
   }
-
 }

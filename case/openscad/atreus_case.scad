@@ -253,11 +253,11 @@ module left_half(switch_holes=true, key_size=key_hole_size) {
   mirror ([1,0,0]) { right_half(switch_holes, key_size); }
 }
 
-module bottom_plate(hol_radius = screw_hole_radius, extension = 0) {
+module bottom_plate(hol_radius = screw_hole_radius, extension = 0, multiplier = 1) {
   /* bottom layer of the case */
   difference() {
     hull() {
-      screw_holes(washer_radius, extension);
+      screw_holes(washer_radius * multiplier, extension);
     }
     screw_holes(hol_radius, extension);
     translate([-20, 98]){
@@ -336,9 +336,9 @@ module quartered_spacer() {
   translate([5,-10]) spacer_quadrant(3);
 }
 
-module another_spacer() {
+module another_spacer(mult = 1) {
   difference() {
-    bottom_plate();
+    bottom_plate(multiplier = mult);
     translate([-134, 116]) {
       polygon(
         points=[
@@ -364,7 +364,7 @@ module another_spacer() {
   }
 }
 
-/* Create all four layers */
+/* Create all four layers
 translate([280, 0]) top_plate();
 translate([0, 120]) switch_plate();
 translate([0, 0]) bottom_plate();
@@ -377,3 +377,8 @@ translate([280, 120]) {
     another_spacer();
   }
 }
+*/
+translate([0, 0, 3]) another_spacer(1.0);
+color([0.5, 0.5, 0.5]) translate([0, 0, 6]) another_spacer(1.3);
+color([0.3, 0.3, 0,3]) translate([0, 0, 9]) another_spacer(1.5);
+color([0.1, 0.1, 0.1])translate([0, 0, 12]) another_spacer(1.8);

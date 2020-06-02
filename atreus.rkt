@@ -44,8 +44,8 @@
     (fp_line (start 1.524 1.143) (end -1.524 1.143) (layer F.SilkS) (width 0.2032))
     (fp_line (start -1.524 1.143) (end -1.524 -1.143) (layer F.SilkS) (width 0.2032))
 
-    (pad 1 thru_hole rect (at 3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
-    (pad 2 thru_hole circle (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
+    (pad 1 thru_hole circle (at 3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
+    (pad 2 thru_hole rect (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)

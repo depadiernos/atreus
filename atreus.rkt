@@ -16,42 +16,31 @@
   `(module MX_FLIP (layer Front) (tedit 4FD81CDD) (tstamp 543EF801)
     (at ,x ,y ,rotation)
     (path /543DB910) ; TODO: this is not documented; no idea what it does
-    (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS) (effects (font (size 1.524 1.778) (thickness 0.254))))
-    (fp_line (start -7 -7) (end  7 -7) (layer F.SilkS) (width 0.381))
-    (fp_line (start  7 -7) (end  7  7) (layer F.SilkS) (width 0.381))
-    (fp_line (start  7  7) (end -7  7) (layer F.SilkS) (width 0.381))
-    (fp_line (start -7  7) (end -7 -7) (layer F.SilkS) (width 0.381))
-    (pad 0 np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878)) ; switch hole, no copper
-    (pad 0 np_thru_hole circle (at -5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
-    (pad 0 np_thru_hole circle (at 5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
-    (pad 1 thru_hole circle (at 2.54 -5.08) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.SilkS *.Mask) ,net-pos)
-    (pad 1 thru_hole circle (at 3.81 -2.54) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.SilkS *.Mask) ,net-pos)
-    (pad 2 thru_hole circle (at -2.54 -5.08) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.SilkS *.Mask) ,net-neg)
-    (pad 2 thru_hole circle (at -3.81 -2.54) (size 2.286 2.286) (drill 1.4986) (layers *.Cu *.SilkS *.Mask) ,net-neg)))
+    (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS) hide (effects (font (size 1.524 1.778) (thickness 0.254))))
+    (fp_line (start -7 -7) (end  7 -7) (layer Cmts.User) (width 0.1))
+    (fp_line (start  7 -7) (end  7  7) (layer Cmts.User) (width 0.1))
+    (fp_line (start  7  7) (end -7  7) (layer Cmts.User) (width 0.1))
+    (fp_line (start -7  7) (end -7 -7) (layer Cmts.User) (width 0.1))
+    (pad HOLE np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878)) ; switch hole, no copper
+    (pad HOLE np_thru_hole circle (at -5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
+    (pad HOLE np_thru_hole circle (at 5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
+    (pad 1 thru_hole circle (at -3.405 -3.27 29) (size 2.2 2.2) (drill 1.5) (layers *.Cu *.SilkS *.Mask) ,net-neg)
+    (pad 2 thru_hole circle (at 2.52 -4.79) (size 2.2 2.2) (drill 1.5) (layers *.Cu *.SilkS *.Mask) ,net-pos)))
 
 (define (diode-module x y rotation label net-pos net-neg)
   `(module DIODE (layer Front) (tedit 4E0F7A99) (tstamp 543EF854)
     (at ,x ,y ,(+ 90 rotation))
     (path /543DB90F)
     (fp_text reference ,label (at 0 0 ,rotation) (layer F.SilkS) hide (effects (font (size 1.016 1.016) (thickness 0.2032))))
-    (fp_line (start 0.9 1.1) (end 0.9 -1.1) (layer F.SilkS) (width 0.15))
-    (fp_line (start 1.1 -1.1) (end 1.1 1.1) (layer F.SilkS) (width 0.15))
-    (fp_line (start 1.3 -1) (end 1.3 -1.1) (layer F.SilkS) (width 0.15))
-    (fp_line (start 1.3 -1.1) (end 1.3 -1) (layer F.SilkS) (width 0.15))
-    (fp_line (start 1.3 1.1) (end 1.3 -1) (layer F.SilkS) (width 0.15))
-    (fp_line (start -1.524 -1.143) (end 1.524 -1.143) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.524 -1.143) (end 1.524 1.143) (layer F.SilkS) (width 0.2032))
-    (fp_line (start 1.524 1.143) (end -1.524 1.143) (layer F.SilkS) (width 0.2032))
-    (fp_line (start -1.524 1.143) (end -1.524 -1.143) (layer F.SilkS) (width 0.2032))
 
-    (pad 1 thru_hole rect (at 3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
-    (pad 2 thru_hole circle (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
+    (pad 1 thru_hole circle (at 3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-pos)
+    (pad 2 thru_hole rect (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
      (at 134 48 270)
      (path /543EEB02)
-     (fp_text reference Promicro (at 10 0) (layer F.SilkS) (effects (font (size 1 1) (thickness 0.15))))
+     (fp_text reference Promicro (at 10 0) (layer F.SilkS) hide (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
      (fp_line (start 15.9 7.62) (end 15.9 -7.62) (layer F.SilkS) (width 0.381))
      (fp_line (start 15.9 -7.62) (end -15.24 -7.62) (layer F.SilkS) (width 0.381))

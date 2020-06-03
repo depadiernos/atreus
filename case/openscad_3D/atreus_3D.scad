@@ -40,7 +40,7 @@ switch_hole_size = 14;
 
 /* Sets whether the case should use notched holes. As far as I can
    tell these notches are not all that useful... */
-use_notched_holes = true;
+use_notched_holes = false;
 
 /* Number of rows and columns in the matrix. You need to update
    staggering_offsets if you change n_cols. */
@@ -90,7 +90,7 @@ module switch_hole(position, notches=use_notched_holes) {
   notch_depth  = 0.8128;
   translate(position) {
     union() {
-        translate([0,0,-1])
+      translate([0,0,-1])
       cube([hole_size, hole_size,50], center=true);
       if (notches == true) {
         translate([0, notch_offset,-1]) {
@@ -162,14 +162,17 @@ module right_half (switch_holes=true, key_size=key_hole_size) {
      spacer(). */
   x_offset = 0.5 * row_spacing;
   y_offset = 0.5 * column_spacing;
-  thumb_key_offset = y_offset + 0.5 * column_spacing;
+  // thumb_key_offset = y_offset + 0.5 * column_spacing;
+  thumb_key_offset = 10.5;
   rotate_half() {
     add_hand_separation() {
       for (j=[0:(n_thumb_keys-1)]) {
         if (switch_holes == true) {
           switch_hole([x_offset + j*row_spacing, thumb_key_offset,-1]);
+          switch_hole([x_offset + j*row_spacing, thumb_key_offset + row_spacing], key_size);
         } else {
           thumb_key([x_offset + j*row_spacing, thumb_key_offset,-1], key_size);
+          thumb_key([x_offset + j*row_spacing, thumb_key_offset + row_spacing], key_size);
         }
       }
       for (j=[0:(n_cols-1)]) {
@@ -199,24 +202,27 @@ module screw_hole(radius, offset_radius, position, direction) {
   }
 }
 
-module right_screw_holes(hole_radius) {
+module right_screw_holes(hole_radius, extension = 0) {
   /* coordinates of the back right screw hole before rotation... */
   back_right = [(n_cols+n_thumb_keys)*row_spacing,
                staggering_offsets[n_cols-1] + n_rows * column_spacing];
   /* and after */
-  tmp = rz_fun(back_right, angle, [0, 2.25*column_spacing]);
+  tmp = rz_fun(back_right, angle, [0, 2.5*column_spacing]);
 
   nudge = 0.75;
 
   rotate_half() {
     add_hand_separation() {
-      screw_hole(hole_radius, washer_radius,
-                 [row_spacing, 0],
+      screw_hole(hole_radius,
+                 washer_radius,
+                 [row_spacing, 0 - extension],
                  [-nudge, -nudge]);
-      screw_hole(hole_radius, washer_radius,
-                 [(n_cols+n_thumb_keys)*row_spacing, staggering_offsets[n_cols-1]],
+      screw_hole(hole_radius,
+                 washer_radius,
+                 [(n_cols+n_thumb_keys)*row_spacing, staggering_offsets[n_cols-1] - extension],
                  [nudge, -nudge]);
-      screw_hole(hole_radius, washer_radius,
+      screw_hole(hole_radius,
+                 washer_radius,
                  back_right,
                  [nudge, nudge]);
     }
@@ -227,10 +233,10 @@ module right_screw_holes(hole_radius) {
              back_screw_hole_offset]) {
     rotate_half() {
       add_hand_separation() {
-        screw_hole(hole_radius,
-                   washer_radius,
-                   back_right,
-                   [nudge, nudge]);
+        // screw_hole(hole_radius,
+        //            washer_radius,
+        //            back_right,
+        //            [nudge, nudge]);
       }
     }
   }
@@ -246,11 +252,17 @@ module left_half(switch_holes=true, key_size=key_hole_size) {
   mirror ([1,0,0]) { right_half(switch_holes, key_size); }
 }
 
-module bottom_plate() {
+module bottom_plate(hol_radius = screw_hole_radius, extension = 0, multiplier = 1) {
   /* bottom layer of the case */
   difference() {
     hull() { screw_holes(washer_radius); }
     screw_holes(screw_hole_radius);
+    translate([-20,98]) {
+      cylinder(r=1.5, h=50, center=true);
+    }
+    translate([20,98]) {
+      cylinder(r=1.5, h=50, center=true);
+    }
   }
 }
 
@@ -260,15 +272,26 @@ module top_plate() {
     bottom_plate();
     right_half(false);
     left_half(false);
+    translate([-10.15, 52]) {
+      cube([20,60,50], 10);
+    }
+    translate([-20,98]) {
+      cylinder(r=1.5, h=50, center=true);
+    }
+    translate([20,98]) {
+      cylinder(r=1.5, h=50, center=true);
+    }
   }
 }
-
 module switch_plate() {
   /* the switch plate */
   difference() {
     bottom_plate();
     right_half();
     left_half();
+    translate([-10.15, 52]) {
+      cube([20,60,50], 10);
+    }
   }
 }
 
@@ -293,6 +316,38 @@ module spacer() {
   }
 }
 
+module another_spacer(mult = 1) {
+  difference() {
+    bottom_plate(multiplier = mult);
+    linear_extrude(height = 5) {
+      translate([-134, 116]) {
+        polygon(
+          points=[
+            [29, -18],
+            [239, -18],
+            [251, -93],
+            [161, -110],
+            [107, -110],
+            [16.5, -93],
+          ]
+        );
+      }
+    }
+    linear_extrude(height = 5) {
+      translate([-134, 116]) {
+        polygon(
+          points=[
+            [124, -2],
+            [124, -39],
+            [144, -39],
+            [144, -2],
+          ]
+        );
+      }
+    }
+  }
+}
+
 module spacer_quadrant(spacer_quadrant_number) {
   /* Cut a quarter of a spacer. */
   translate([0, spacer_quartering_offset]) {
@@ -314,16 +369,18 @@ module quartered_spacer()
 
 /* Create all four layers. */
 
-translate([0,0,9]) top_plate();
+// translate([0,0,9]) top_plate();
 translate([0, 0, 6]) { switch_plate(); }
 translate([300, 0,0]) { bottom_plate(); }
-translate([0,0,3]) spacer();
-translate([0, 0,0]) {
-  if (quarter_spacer == true) {
-    quartered_spacer();
-  }
-  else {
-    spacer();
-  }
+translate([0, 0, 3]) { another_spacer(); }
+translate([0, 0, 0]) { another_spacer(); }
+// translate([0,0,3]) spacer();
+// translate([0, 0,0]) {
+//   if (quarter_spacer == true) {
+//     quartered_spacer();
+//   }
+//   else {
+//     spacer();
+//   }
 
-}
+// }

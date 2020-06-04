@@ -386,8 +386,10 @@ module another_spacer(mult = 1) {
 // color([0.3, 0.3, 0,3]) translate([0, 0, 9]) another_spacer(1.5);
 // color([0.1, 0.1, 0.1])translate([0, 0, 12]) another_spacer(1.8);
 
-translate([0, 0, 5]) linear_extrude(height = 4) another_spacer();
+// translate([0, 0, 5]) linear_extrude(height = 4) another_spacer();
 
-translate([0, 0, 0]) linear_extrude(height = 5) switch_plate();
+// translate([0, 0, 0]) linear_extrude(height = 5) switch_plate();
 
-translate([0, 120, 0]) linear_extrude(height = 5) bottom_plate();
+// translate([0, 120, 0]) linear_extrude(height = 3) bottom_plate();
+
+switch_plate();

@@ -6,26 +6,37 @@
 (define x-offset 19)
 (define y-offset 20)
 
-(define spacing 19)
+(define spacing-x 18)
+(define spacing-y 17)
 (define angle 10)
 
 (define column-offsets '(8 5 0 6 11 48 48 11 6 0 5 8))
 
 (define (switch-module x y rotation label net-pos net-neg)
   ;; TODO: set timestamps?
-  `(module MX_FLIP (layer Front) (tedit 4FD81CDD) (tstamp 543EF801)
+  `(module chocondiks (layer F.Cu) (tedit 5E5387C6)
     (at ,x ,y ,rotation)
-    (path /543DB910) ; TODO: this is not documented; no idea what it does
     (fp_text reference ,label (at 0 3.302 ,rotation) (layer F.SilkS) hide (effects (font (size 1.524 1.778) (thickness 0.254))))
-    (fp_line (start -7 -7) (end  7 -7) (layer Cmts.User) (width 0.1))
     (fp_line (start  7 -7) (end  7  7) (layer Cmts.User) (width 0.1))
-    (fp_line (start  7  7) (end -7  7) (layer Cmts.User) (width 0.1))
+    (fp_line (start -7 -7) (end  7 -7) (layer Cmts.User) (width 0.1))
     (fp_line (start -7  7) (end -7 -7) (layer Cmts.User) (width 0.1))
-    (pad HOLE np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878)) ; switch hole, no copper
-    (pad HOLE np_thru_hole circle (at -5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
-    (pad HOLE np_thru_hole circle (at 5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
-    (pad 1 thru_hole circle (at -3.405 -3.27 29) (size 2.2 2.2) (drill 1.5) (layers *.Cu *.SilkS *.Mask) ,net-neg)
-    (pad 2 thru_hole circle (at 2.52 -4.79) (size 2.2 2.2) (drill 1.5) (layers *.Cu *.SilkS *.Mask) ,net-pos)))
+    (fp_line (start  7  7) (end -7  7) (layer Cmts.User) (width 0.1))
+
+    (fp_line (start  9 -8.5) (end  9  8.5) (layer Dwgs.User) (width 0.1))
+    (fp_line (start -9 -8.5) (end  9 -8.5) (layer Dwgs.User) (width 0.1))
+    (fp_line (start -9  8.5) (end -9 -8.5) (layer Dwgs.User) (width 0.1))
+    (fp_line (start  9  8.5) (end -9  8.5) (layer Dwgs.User) (width 0.1))
+
+    (pad "" np_thru_hole circle (at 0 0) (size 3.4 3.4) (drill 3.4) (layers *.Cu *.Mask))
+
+    (pad "" np_thru_hole circle (at -5.22 4.2) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at -5.5    0) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at  5.22 4.2) (size 1.2 1.2) (drill 1.2) (layers *.Cu *.Mask))
+    (pad "" np_thru_hole circle (at  5.5    0) (size 1.7 1.7) (drill 1.7) (layers *.Cu *.Mask))
+    
+    (pad 1 thru_hole circle (at  0 -5.9) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-neg)
+    (pad 2 thru_hole circle (at -5 -3.8) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)
+    (pad 2 thru_hole circle (at  5 -3.8) (size 2 2) (drill 1.2) (layers *.Cu *.Mask) ,net-pos)))
 
 (define (diode-module x y rotation label net-pos net-neg)
   `(module DIODE (layer Front) (tedit 4E0F7A99) (tstamp 543EF854)
@@ -38,7 +49,7 @@
 
 (define microcontroller-module
   `(module PROMICRO (layer Front) (tedit 4FDC31C8) (tstamp 543EF800)
-     (at 134 48 270)
+     (at 128.72 48 270)
      (path /543EEB02)
      (fp_text reference Promicro (at 10 0) (layer F.SilkS) hide (effects (font (size 1 1) (thickness 0.15))))
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
@@ -104,13 +115,13 @@
 (define (switch row col)
   (let* ([left? (< col 6)]
          [rotation (if left? -10 10)]
-         [x (* (+ 1 col) spacing)]
-         [y (+ (list-ref column-offsets col) (* spacing row))]
+         [x (* (+ 1 col) spacing-x)]
+         [y (+ (list-ref column-offsets col) (* spacing-y row))]
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 6) (* hypotenuse (cos Θ′)))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885)) (* hypotenuse (sin Θ′)))]
+         [x′ (+ (if left? x-offset 8) (* hypotenuse (cos Θ′)))]
+         [y′ (+ (if left? y-offset (+ y-offset 40.633674)) (* hypotenuse (sin Θ′)))]
          [label (format "SW~a:~a" col row)]
          [diode (+ row (* col 4))]
          ;; if we try to number nets linearly, kicad segfaults; woo!
@@ -124,24 +135,22 @@
          [column-net `(net ,(+ net-col 5)
                            ,(string->symbol (format "N-col-~s" net-col)))]
          ;; rotate middle keys additional 90° after calculating position
-         [rotation (cond [(= 5 col) 80]
-                         [(= 6 col) 280]
+         [rotation (cond [(= 5 col) -10]
+                         [(= 6 col) 10]
                          [true rotation])])
-    (switch-module x′ y′ rotation label
-                   (if left? diode-net column-net)
-                   (if left? column-net diode-net))))
+    (switch-module x′ y′ rotation label diode-net column-net)))
 
 (define (diode row col)
   (let* ([left? (< col 6)]
          [rotation (if left? -10 10)]
-         [x (* (+ 1 col) spacing)]
-         [y (+ (list-ref column-offsets col) (* spacing row))]
+         [x (* (+ 1 col) spacing-x)]
+         [y (+ (list-ref column-offsets col) (* spacing-y row))]
          [hypotenuse (sqrt (+ (* x x) (* y y)))]
          [Θ (atan (/ y x))]
          [Θ′ (- Θ (degrees->radians rotation))]
-         [x′ (+ (if left? x-offset 6) (* hypotenuse (cos Θ′))
+         [x′ (+ (if left? x-offset 8) (* hypotenuse (cos Θ′))
                 (if left? 9 -9))]
-         [y′ (+ (if left? y-offset (+ y-offset 42.885))
+         [y′ (+ (if left? y-offset (+ y-offset 40.633674))
                 (* hypotenuse (sin Θ′)))]
          [label (format "D~a:~a" col row)]
          [diode (+ row (* col 4))]
@@ -169,8 +178,8 @@
     (list (switch row col) (diode row col))))
 
 (define edge-cuts
-  (for/list [(s '([31 22] [84 22]  [141 30] [127 30] [185 22] [237 22] [250 95]  [161 112] [107 112] [18 95]))
-             (e '([84 22] [127 30] [185 22] [141 30] [237 22] [250 95] [161 112] [107 112] [18 95]   [31 22]))]
+  (for/list [(s '([28 21] [74 21]  [120 30] [137 30] [183 21] [230 21] [242 88]  [154 109] [103 109] [16 88]))
+             (e '([74 21] [120 30] [137 30] [183 21] [230 21] [242 88] [154 109] [103 109] [16  88]  [28 21]))]
     `(gr_line (start ,@s) (end ,@e) (angle 90) (layer Edge.Cuts) (width 0.3))))
 
 (define board
